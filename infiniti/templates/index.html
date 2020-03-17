@@ -1,0 +1,712 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <title>Infiniti Systems | Product Design | Industrial Consultancy | Web Services</title>
+
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="theme-color" content="#000000">
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css' %}">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="{% static 'plugins/fontawesome/font-awesome.min.css' %}">
+    <!-- Animation -->
+    <link rel="stylesheet" href="{% static 'plugins/animate.css' %}">
+    <!-- Prettyphoto -->
+    <link rel="stylesheet" href="{% static 'plugins/prettyPhoto.css' %}">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="{% static 'plugins/owl/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'plugins/owl/owl.theme.css' %}">
+    <!-- Flexslider -->
+    <link rel="stylesheet" href="{% static 'plugins/flex-slider/flexslider.css' %}">
+    <!-- Flexslider -->
+    <link rel="stylesheet" href="{% static 'plugins/cd-hero/cd-hero.css' %}">
+    <!-- Style Swicther -->
+    <link id="style-switch" href="{% static 'css/presets/preset3.css' %}" media="screen" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="plugins/html5shiv.js"></script>
+      <script src="plugins/respond.min.js"></script>
+    <![endif]-->
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+    </script>
+    <script>
+        $(function() {
+            $("#header").load("headerpage");
+            $("#footer").load("footerpage");
+            $("#counter").load("counterpage");
+        });
+    </script>
+
+    <!-- Main Stylesheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+    <!--Favicon-->
+    <link rel="icon" href="{% static 'images/favicon/logo.png' %}" type="image/x-icon" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static 'img/favicon/favicon-144x144.png' %}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static 'img/favicon/favicon-72x72.png' %}">
+    <link rel="apple-touch-icon-precomposed" href="{% static 'img/favicon/favicon-54x54.png' %}">
+
+</head>
+
+<body>
+
+    <div class="body-inner">
+        <div id="header"></div>
+
+        <!-- Slider start -->
+        <section id="home" class="p-0" style="height: 100vh;">
+            <div id="main-slide" class="cd-hero" style="height: 100vh;">
+                <ul class="cd-hero-slider" style="height: 100vh;">
+                    <li class="selected">
+                        <div class="overlay2" style="height: 100vh;">
+                            <img class="img-fluid" style="width: 100%; height: 100%; background-size: cover;" src="{% static 'images/slider/bg1.jpg' %}" alt="slider">
+                        </div>
+                        <div class="cd-full-width">
+                            <h2>From Imagination To Innovation!</h2>
+                            <h3>Using Technology to bring people together.</h3>
+                        </div>
+                        <!-- .cd-full-width -->
+                    </li>
+                    <li>
+                        <div class="overlay2" style="height: 100vh;">
+                            <img class="img-fluid" style="width: 100%; height: 100%; background-size: cover;" src="{% static 'images/slider/bg2.jpg' %}" alt="slider">
+                        </div>
+                        <div class="cd-half-width">
+                            <h2>Technology will never stop Evolvong it's the nature of the beast.</h2>
+                            <p>Stay on track with next-generation Automation Solutions by Connecting with Us!</p>
+                            <a href="industry-consultancy" class="cd-btn btn btn-primary solid">Learn More</a>
+                        </div>
+                        <!-- .cd-half-width -->
+
+                        <!-- <div class="cd-half-width cd-img-container">
+                        <img src="{% static 'images/slider/bg-thumb1.png' %}" alt="">
+                    </div> -->
+                        <!-- .cd-half-width.cd-img-container -->
+                    </li>
+                    <li>
+                        <div class="overlay2" style="height: 100vh;">
+                            <img class="img-fluid" style="width: 100%; height: 100%; background-size: cover;" src="{% static 'images/slider/bg3.jpg' %}" alt="slider">
+                        </div>
+                        <!-- <div class="cd-half-width cd-img-container img-right">
+                        <img src="{% static 'images/slider/bg-thumb2.png' %}" alt="">
+                    </div> -->
+                        <!-- .cd-half-width.cd-img-container -->
+                        <div class="cd-half-width">
+                            <h2>Got tight technical and budget constraints for your Product's Success?</h2>
+                            <p>We work tirelessly to deliver engaging products that stimulate the user and disrupt markets.
+                            </p>
+                            <a href="products-and-design" class="cd-btn btn secondary btn-primary solid">Learn More</a>
+                        </div>
+                        <!-- .cd-half-width -->
+                    </li>
+                    <li class="cd-bg-video" style="height: 100vh;">
+                        <div class="cd-full-width">
+                            <h2>“It’s not that we use Technology, We live Technology.” </h2>
+                            <p>– Godfrey Reggio</p>
+                            <a href="about-us" class="cd-btn btn btn-primary solid">Learn more</a>
+                        </div>
+                        <!-- .cd-full-width -->
+
+                        <div class="cd-bg-video-wrapper" data-video="{% static 'videos/video' %}">
+                            <!-- video element will be loaded using jQuery -->
+                        </div>
+                        <!-- .cd-bg-video-wrapper -->
+                    </li>
+                </ul>
+                <!--/ cd-hero-slider -->
+
+                <div class="cd-slider-nav">
+                    <nav>
+                        <span class="cd-marker item-1"></span>
+                        <ul>
+                            <li class="selected"><a href="#0"><i class="fa fa-hashtag"></i>Moto</a></li>
+                            <li><a href="#0"><i class="fa fa-handshake-o"></i>Consult</a></li>
+                            <li><a href="#0"><i class="fa fa-paint-brush"></i>Design</a></li>
+                            <li class="video"><a href="#0"><i class="fa fa-info"></i>About</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- .cd-slider-nav -->
+
+            </div>
+            <!--/ Main slider end -->
+        </section>
+        <!--/ Slider end -->
+
+
+        <!-- Service box start -->
+        <section id="service" class="service angle">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 heading">
+                        <span class="title-icon float-left"><i class="fa fa-cogs"></i></span>
+                        <h2 class="title">Service We Provide <span class="title-desc">A Quality Experience Team with 8 years experience</span></h2>
+                    </div>
+                </div>
+                <!-- Title row end -->
+
+                <div class="row">
+                    <div class="col-md-3 col-sm-3 wow fadeInDown" data-wow-delay=".35s">
+                        <div class="service-content text-center">
+                            <span class="service-icon icon-pentagon"><i class="fa fa-gears"></i></span>
+                            <h3>Products and Design</h3>
+                            <p style="height: 120px;">Our Product Design and Development Service will help take your business from where it is today to where it needs to be in the future.</p>
+                            <a href="products-and-design" class="cd-btn btn secondary btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                    <!--/ End first service -->
+
+                    <div class="col-md-3 col-sm-3 wow fadeInDown" data-wow-delay=".55s">
+                        <div class="service-content text-center">
+                            <span class="service-icon icon-pentagon"><i class="fa fa-handshake-o"></i></span>
+                            <h3>Industry Consultancy</h3>
+                            <p style="height: 120px;">Improve your enterprise asset management and performance with technologies, such as Automation, Cloud, Analytics, Mobility and Security.</p>
+                            <a href="industry-consultancy" class="cd-btn btn secondary btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                    <!--/ End Second service -->
+
+                    <div class="col-md-3 col-sm-3 wow fadeInDown" style="height: 10px;" data-wow-delay=".75s">
+                        <div class="service-content text-center">
+                            <span class="service-icon icon-pentagon"><i class="fa fa-jsfiddle"></i></span>
+                            <h3>Infi IoT Platform</h3>
+                            <p style="height: 120px;">Quick and Solid solution for your IoT Application: Data Acquisition, Storage, Processing, Powerful Advanced Analytics, Visualization, and Enterprise Application Integration.
+                            </p>
+                            <a href="infi-iot-platform" class="cd-btn btn secondary btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                    <!--/ End Third service -->
+
+                    <div class="col-md-3 col-sm-3 wow fadeInDown" data-wow-delay=".95s">
+                        <div class="service-content text-center">
+                            <span class="service-icon icon-pentagon"><i class="fa fa-lightbulb-o"></i></span>
+                            <h3>Web Development Services</h3>
+                            <p style="height: 120px;">We design beautiful modern engaging websites using latest responsive technologies.</p>
+                            <a href="web-development-services" class="cd-btn btn secondary btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                    <!--/ End 4th service -->
+                </div>
+                <!-- Content row end -->
+            </div>
+            <!--/ Container end -->
+        </section>
+        <!--/ Service box end -->
+
+        <!-- Portfolio start -->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 heading">
+                        <span class="title-icon classic float-left"><i class="fa fa-suitcase"></i></span>
+                        <h2 class="title classic">Our Awesome Work</h2>
+                    </div>
+                </div>
+                <!-- Title row end -->
+
+                <!--Isotope filter start -->
+                <div class="row text-right">
+                    <div class="col-12">
+                        <div class="isotope-nav" data-isotope-nav="isotope">
+                            <ul>
+                                <li><a href="#" class="active" data-filter="*">All</a></li>
+                                <li><a href="#" data-filter=".Sensors">Sensors</a></li>
+                                <li><a href="#" data-filter=".Power">Power Products</a></li>
+                                <li><a href="#" data-filter=".Consult">Consultancy</a></li>
+                                <li><a href="#" data-filter=".Web">Web Services</a></li>
+                                <li><a href="#" data-filter=".3D">3D Printing</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Isotope filter end -->
+            </div>
+
+            <div class="container-fluid">
+                <div class="row isotope" id="isotope">
+                    <div class="col-sm-3 Web isotope-item">
+                        <div class="grid">
+                            <figure class="m-0 effect-oscar">
+                                <img src="{% static 'images/portfolio/portfolio3.jpg' %}" alt="">
+                                <figcaption>
+                                    <h3>InfiIoT - The foolproof Iot Cloud Platform</h3>
+                                    <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
+                                            class="fa fa-link"></i></a>
+                                    <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg3.jpg' %}"><i class="fa fa-search"></i></a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <!-- InfiIot end -->
+
+                    <div class="col-sm-3 Power isotope-item">
+                        <div class="grid">
+                            <figure class="m-0 effect-oscar">
+                                <img src="{% static 'images/portfolio/portfolio2.jpg' %}" alt="">
+                                <figcaption>
+                                    <h3>Infi-Drive</h3>
+                                    <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
+                                            class="fa fa-link"></i></a>
+                                    <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg2.jpg' %}"><i class="fa fa-search"></i></a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <!-- infi Drive end -->
+
+                    <div class="col-sm-3 Sensors isotope-item">
+                        <div class="grid">
+                            <figure class="m-0 effect-oscar">
+                                <img src="{% static 'images/portfolio/portfolio1.jpg' %}" alt="">
+                                <figcaption>
+                                    <h3>Infi-Sense</h3>
+                                    <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
+                                            class="fa fa-link"></i></a>
+                                    <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg1.jpg' %}"><i class="fa fa-search"></i></a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <!-- infi sense end -->
+
+
+                    <div class="col-sm-3 Sensors isotope-item">
+                        <div class="grid">
+                            <figure class="m-0 effect-oscar">
+                                <img src="{% static 'images/portfolio/portfolio1.jpg' %}" alt="">
+                                <figcaption>
+                                    <h3>Infi-Mesh</h3>
+                                    <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
+                                            class="fa fa-link"></i></a>
+                                    <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg1.jpg' %}"><i class="fa fa-search"></i></a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <!-- infi mesh end -->
+
+
+                    <div class="col-sm-3 3D isotope-item">
+                        <div class="grid">
+                            <figure class="m-0 effect-oscar">
+                                <img src="{% static 'images/portfolio/portfolio4.jpg' %}" alt="">
+                                <figcaption>
+                                    <h3>Industry Grade Desktop Printer</h3>
+                                    <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
+                                            class="fa fa-link"></i></a>
+                                    <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg4.jpg' %}"><i class="fa fa-search"></i></a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <!-- 3D Printer end -->
+
+                    <div class="col-sm-3 Consult isotope-item">
+                        <div class="grid">
+                            <figure class="m-0 effect-oscar">
+                                <img src="{% static 'images/portfolio/portfolio3.jpg' %}" alt="">
+                                <figcaption>
+                                    <h3>Industry Automation</h3>
+                                    <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
+                                            class="fa fa-link"></i></a>
+                                    <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg3.jpg' %}"><i class="fa fa-search"></i></a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <!-- Ind Automation  end -->
+
+                    <div class="col-sm-3 Power isotope-item">
+                        <div class="grid">
+                            <figure class="m-0 effect-oscar">
+                                <img src="{% static 'images/portfolio/portfolio2.jpg' %}" alt="">
+                                <figcaption>
+                                    <h3>Remote Industry Power Analysis System</h3>
+                                    <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
+                                            class="fa fa-link"></i></a>
+                                    <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg2.jpg' %}"><i class="fa fa-search"></i></a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <!-- power analysis end -->
+
+                    <div class="col-sm-3 Sensors isotope-item">
+                        <div class="grid">
+                            <figure class="m-0 effect-oscar">
+                                <img src="{% static 'images/portfolio/portfolio1.jpg' %}" alt="">
+                                <figcaption>
+                                    <h3>Infi-Weather</h3>
+                                    <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
+                                            class="fa fa-link"></i></a>
+                                    <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg1.jpg' %}"><i class="fa fa-search"></i></a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <!-- infi weather end -->
+
+                    <div class="col-sm-3 Sensors isotope-item">
+                        <div class="grid">
+                            <figure class="m-0 effect-oscar">
+                                <img src="{% static 'images/portfolio/portfolio1.jpg' %}" alt="">
+                                <figcaption>
+                                    <h3>Infi-Gauge</h3>
+                                    <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
+                                            class="fa fa-link"></i></a>
+                                    <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg1.jpg' %}"><i class="fa fa-search"></i></a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <!-- infi gauge end -->
+
+                    <div class="col-sm-3 Sensors isotope-item">
+                        <div class="grid">
+                            <figure class="m-0 effect-oscar">
+                                <img src="{% static 'images/portfolio/portfolio1.jpg' %}" alt="">
+                                <figcaption>
+                                    <h3>Infi-Leaf</h3>
+                                    <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
+                                            class="fa fa-link"></i></a>
+                                    <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg1.jpg' %}"><i class="fa fa-search"></i></a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <!-- infi leaf end -->
+
+                    <div class="col-sm-3 Sensors isotope-item">
+                        <div class="grid">
+                            <figure class="m-0 effect-oscar">
+                                <img src="{% static 'images/portfolio/portfolio1.jpg' %}" alt="">
+                                <figcaption>
+                                    <h3>Infi-Soil/ Infi-ECE</h3>
+                                    <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
+                                            class="fa fa-link"></i></a>
+                                    <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg1.jpg' %}"><i class="fa fa-search"></i></a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <!-- infi soil end -->
+
+                    <div class="col-sm-3 3D isotope-item">
+                        <div class="grid">
+                            <figure class="m-0 effect-oscar">
+                                <img src="{% static 'images/portfolio/portfolio4.jpg' %}" alt="">
+                                <figcaption>
+                                    <h3>3D Printing Services</h3>
+                                    <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
+                                            class="fa fa-link"></i></a>
+                                    <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg4.jpg' %}"><i class="fa fa-search"></i></a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <!-- 3D services end -->
+
+                    <div class="col-sm-3 Consult isotope-item">
+                        <div class="grid">
+                            <figure class="m-0 effect-oscar">
+                                <img src="{% static 'images/portfolio/portfolio3.jpg' %}" alt="">
+                                <figcaption>
+                                    <h3>Smart Lab</h3>
+                                    <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
+                                            class="fa fa-link"></i></a>
+                                    <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg3.jpg' %}"><i class="fa fa-search"></i></a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <!-- Smart Lab end -->
+
+                    <div class="col-sm-3 Power isotope-item">
+                        <div class="grid">
+                            <figure class="m-0 effect-oscar">
+                                <img src="{% static 'images/portfolio/portfolio2.jpg' %}" alt="">
+                                <figcaption>
+                                    <h3>Industry Grade Data Logger</h3>
+                                    <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
+                                            class="fa fa-link"></i></a>
+                                    <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg2.jpg' %}"><i class="fa fa-search"></i></a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <!-- Data logger end -->
+
+                    <div class="col-sm-3 Consult isotope-item">
+                        <div class="grid">
+                            <figure class="m-0 effect-oscar">
+                                <img src="{% static 'images/portfolio/portfolio3.jpg' %}" alt="">
+                                <figcaption>
+                                    <h3>Earth Sense</h3>
+                                    <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
+                                            class="fa fa-link"></i></a>
+                                    <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg3.jpg' %}"><i class="fa fa-search"></i></a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <!-- Earth Sense end -->
+        </section>
+        <!-- Portfolio end -->
+
+        <!-- counter start -->
+        <div id="counter"></div>
+        <!--/ counter end -->
+
+        <!-- Feature box start -->
+        <section id="feature" class="feature">
+            <div class="container">
+                <div class="row">
+                    <div class="feature-box col-sm-4 wow fadeInDown" data-wow-delay=".25s">
+                        <span class="feature-icon float-left"><i class="fa fa-space-shuttle"></i></span>
+                        <div class="feature-content">
+                            <h3>Engineering</h3>
+                            <p>Award winning engineering team, with a wealth of experience and a cache of enthusiasm.
+                            </p>
+                        </div>
+                    </div>
+                    <!--/ End first featurebox -->
+
+                    <div class="feature-box col-sm-4 wow fadeInDown" data-wow-delay=".25s">
+                        <span class="feature-icon float-left"><i class="fa fa-codepen"></i></span>
+                        <div class="feature-content">
+                            <h3>Concept Design</h3>
+                            <p>Fresh ideas with a global market perspective.</p>
+                        </div>
+                    </div>
+                    <!--/ End 2nd featurebox -->
+
+                    <div class="feature-box col-sm-4 wow fadeInDown" data-wow-delay=".25s">
+                        <span class="feature-icon float-left"><i class="fa fa-snowflake-o"></i></span>
+                        <div class="feature-content">
+                            <h3>Innovation</h3>
+                            <p>We offer multi-disciplinary product design and innovation.</p>
+                        </div>
+                    </div>
+                    <!--/ End 3rd featurebox -->
+                </div>
+                <!-- Content row end -->
+
+                <div class="gap-40"></div>
+
+                <div class="row">
+                    <div class="feature-box col-sm-4 wow fadeInDown" data-wow-delay=".25s">
+                        <span class="feature-icon float-left"><i class="fa fa-microchip"></i></span>
+                        <div class="feature-content">
+                            <h3>Technology On the Edge</h3>
+                            <p>Using latest Tech to make your project, operate Faster, Smoother and more Secure</p>
+                        </div>
+                    </div>
+                    <!--/ End 1st featurebox -->
+
+                    <div class="feature-box col-sm-4 wow fadeInDown" data-wow-delay=".25s">
+                        <span class="feature-icon float-left"><i class="fa fa-balance-scale"></i></span>
+                        <div class="feature-content">
+                            <h3>Value for Money</h3>
+                            <p>We belive our success lies in Clients Satisfaction, our team is always on front foot while serving Clients.</p>
+                        </div>
+                    </div>
+                    <!--/ End 2nd featurebox -->
+
+                    <div class="feature-box col-sm-4 wow fadeInDown" data-wow-delay=".25s">
+                        <span class="feature-icon float-left"><i class="fa fa-flash"></i></span>
+                        <div class="feature-content">
+                            <h3>Faster TurnAround Time</h3>
+                            <p>With turaround time of less than a week, We are set to serve our Clients at its best.</p>
+                        </div>
+                    </div>
+                    <!--/ End 3rd featurebox -->
+
+                </div>
+            </div>
+            <!--/ Container end -->
+        </section>
+        <!--/ Feature box end -->
+
+        <!-- Why Choose Usbox -->
+        <section id="image-block" class="image-block p-0">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 ts-padding" style="height:650px;background:url({% static 'images/whychoose.jpg' %}) 50% 50% / cover no-repeat;">
+                    </div>
+                    <div class="col-md-6 ts-padding img-block-right">
+                        <div class="img-block-head text-center">
+                            <h2>Know More About Infiniti Systems</h2>
+                            <h3>Why Choose Us</h3>
+                            <p>Here are the reasons you can depend on Infiniti System to keep you and your business up and running:</p>
+                        </div>
+
+                        <div class="gap-30"></div>
+
+                        <div class="image-block-content">
+                            <span class="feature-icon float-left"><i class="fa fa-diamond"></i></span>
+                            <div class="feature-content">
+                                <h3>Our Experience</h3>
+                                <p>To date, we have successfully completed over 40 projects</p>
+                            </div>
+                        </div>
+                        <!--/ End 1st block -->
+
+                        <div class="gap-20"></div>
+
+                        <div class="image-block-content">
+                            <span class="feature-icon float-left"><i class="fa fa-mortar-board"></i></span>
+                            <div class="feature-content">
+                                <h3>Our Skill-Set</h3>
+                                <p>We are product design experts; we are industry experts; we are database-design experts; we are IIOT experts</p>
+                            </div>
+                        </div>
+                        <!--/ End 1st block -->
+
+                        <div class="image-block-content">
+                            <span class="feature-icon float-left"><i class="fa fa-street-view"></i></span>
+                            <div class="feature-content">
+                                <h3>Our Values</h3>
+                                <p>We always recognise and honour the trust our customers place in us.</p>
+                            </div>
+                        </div>
+                        <!--/ End 1st block -->
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ why coose us block end -->
+
+
+        <!-- Parallax 1 start -->
+        <section class="parallax parallax2">
+            <div class="parallax-overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2>Our Clients hire us, rather than somebody else, beacause </h2>
+                        <h3>We Set Clear Deliverables, Set Realistic Expectations and are Transparent throughout the process.
+                        </h3>
+                        <p>
+                            <a href="about-us" class="btn btn-primary solid">Get In Touch</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Container end -->
+        </section>
+        <!-- Parallax 1 end -->
+
+        <!-- Technology Partners start -->
+        <div class="container">
+            <div class="gap-30"></div>
+            <div class="row">
+                <div class="col-md-12 heading">
+                    <span class="title-icon classic float-left"><i class="fa fa-suitcase"></i></span>
+                    <h2 class="title classic">Our Technology Partners</h2>
+                </div>
+            </div>
+            <div class="row wow fadeInLeft">
+                <div id="client-carousel" class="col-sm-12 owl-carousel owl-theme text-center client-carousel">
+                    <figure class="m-0 item client_logo">
+                        <img src="{% static 'images/clients/client1.png' %}" alt="client">
+                    </figure>
+                    <figure class="m-0 item client_logo">
+                        <img src="{% static 'images/clients/client2.png' %}" alt="client">
+                    </figure>
+                    <figure class="m-0 item client_logo">
+                        <img src="{% static 'images/clients/client3.png' %}" alt="client">
+                    </figure>
+                    <figure class="m-0 item client_logo">
+                        <img src="{% static 'images/clients/client4.png' %}" alt="client">
+                    </figure>
+                    <figure class="m-0 item client_logo">
+                        <img src="{% static 'images/clients/client5.png' %}" alt="client">
+                    </figure>
+                    <figure class="m-0 item client_logo">
+                        <img src="{% static 'images/clients/client6.png' %}" alt="client">
+                    </figure>
+                    <figure class="m-0 item client_logo">
+                        <img src="{% static 'images/clients/client7.png' %}" alt="client">
+                    </figure>
+                    <figure class="m-0 item client_logo">
+                        <img src="{% static 'images/clients/client8.png' %}" alt="client">
+                    </figure>
+                    <figure class="m-0 item client_logo">
+                        <img src="{% static 'images/clients/client9.png' %}" alt="client">
+                    </figure>
+                    <figure class="m-0 item client_logo">
+                        <img src="{% static 'images/clients/client10.png' %}" alt="client">
+                    </figure>
+                    <figure class="m-0 item client_logo">
+                        <img src="{% static 'images/clients/client11.png' %}" alt="client">
+                    </figure>
+                </div>
+                <!-- Owl carousel end -->
+            </div>
+            <div class="gap-30"></div>
+            <!-- Main row end -->
+        </div>
+        <!--/ Container end -->
+        </section>
+        <!--/ Clients end -->
+
+        <div id="footer"></div>
+
+        </div>
+        <!-- Body inner end -->
+
+        <!-- jQuery -->
+        <script src="{% static 'plugins/jQuery/jquery.min.js' %}"></script>
+        <!-- Bootstrap JS -->
+        <script src="{% static 'plugins/bootstrap/bootstrap.min.js' %}"></script>
+        <!-- Style Switcher -->
+        <script type="text/javascript" src="{% static 'plugins/style-switcher.js' %}"></script>
+        <!-- Owl Carousel -->
+        <script type="text/javascript" src="{% static 'plugins/owl/owl.carousel.js' %}"></script>
+        <!-- PrettyPhoto -->
+        <script type="text/javascript" src="{% static 'plugins/jquery.prettyPhoto.js' %}"></script>
+        <!-- Bxslider -->
+        <script type="text/javascript" src="{% static 'plugins/flex-slider/jquery.flexslider.js' %}"></script>
+        <!-- CD Hero slider -->
+        <script type="text/javascript" src="{% static 'plugins/cd-hero/cd-hero.js' %}"></script>
+        <!-- Isotope -->
+        <script type="text/javascript" src="{% static 'plugins/isotope.js' %}"></script>
+        <script type="text/javascript" src="{% static 'plugins/ini.isotope.js' %}"></script>
+        <!-- Wow Animation -->
+        <script type="text/javascript" src="{% static 'plugins/wow.min.js' %}"></script>
+        <!-- Eeasing -->
+        <script type="text/javascript" src="{% static 'plugins/jquery.easing.1.3.js' %}"></script>
+        <!-- Counter -->
+        <script type="text/javascript" src="{% static 'plugins/jquery.counterup.min.js' %}"></script>
+        <!-- Waypoints -->
+        <script type="text/javascript" src="{% static 'plugins/waypoints.min.js' %}"></script>
+        <!-- google map -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"></script>
+        <script src="{% static 'plugins/google-map/gmap.js' %}"></script>
+
+        <!-- Main Script -->
+        <script src="{% static 'js/script.js' %}"></script>
+
+        <script>
+            $(document).click(function(event) {
+                var clickover = $(event.target);
+                var _opened = $(".navbar-collapse").hasClass("show");
+                if (_opened === true && !clickover.hasClass("navbar-toggler")) {
+                    $(".navbar-toggler").click();
+                }
+            });
+        </script>
+</body>
+
+</html>
