@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
-
 from django.http import HttpResponse
+from django.template.loader import render_to_string
+from django.core.mail import EmailMessage
 from .models import *
-from .forms import *
 
 
 def index(request):
@@ -53,26 +53,45 @@ def careers(request):
 
 
 def contact(request):
-    return render(request, 'contact.html')
+    if request.method == 'POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        subject = request.POST['subject']
+        message = request.POST['message']
+
+        contact_us = ContactUs.objects.create(name=name, email=email, subject=subject, message=message)
+        contact_us.save()
+
+        # mail part start
+
+        email_subject = 'Contact Us'
+        message = render_to_string('contactus_message.html', {
+            'name': name,
+            'email': email,
+            'subject': subject,
+            'message': message,
+        })
+        to_email = 'info@infinitisystems.co.in'
+        email = EmailMessage(email_subject, message, to=[to_email])
+        email.send()
+
+        # mail part end
+        return render(request, 'contact.html')
+    else:
+        return render(request, 'contact.html')
+
 
 def createnewsletter(request):
-    # print("In Create news letter")
-    if request.method=='POST':
-        print("Got post method")        
-        form = NewsLetterform(request.POST)
-        print(form.is_valid())
-        # if form.is_valid():
-            # print("Valid Form")
-        form.save()
-        email_news= form.cleared_data['email_news']
-        form=NewsLetter()
-        # NewsLetter_obj = NewsLetter(email_news=email_news)
-        # NewsLetter_obj.save()
-        # print("Updated database")
-        # return HttpResponseRedirect('index.html')
-        return redirect ('index.html')
+    if request.method == 'POST':
+        email_news = request.POST['email_news']
+        if NewsLetter.objects.filter(email_news=email_news).exists():
+            print('already registered')
+            return render(request, 'index.html')
+        else:
+            newsletter = NewsLetter.objects.create(email_news=email_news)
+            newsletter.save()
+            return redirect('/')
     else:
-        # form = NewsLetterform()
         print("Not Updated database")
 
-    return render (request, 'index.html') 
+    return render(request, 'index.html')
