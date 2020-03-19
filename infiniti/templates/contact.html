@@ -139,7 +139,27 @@
                     </div>
                 </div>
             </div>
-
+            <div>
+                {% if messages %}
+                {% for message in messages %}
+                <!--        {% if error %}-->
+                <label class="swalDefaultError" hidden>
+                    <script>
+                        var title = `{{message}}`;
+                        console.log('test test')
+                    </script>
+                </label>
+                <!--        {% elif success %}-->
+                <label class="swalDefaultSuccess" hidden>
+                    <script>
+                        var title = `{{message}}`;
+                        console.log('test test')
+                    </script>
+                </label>
+                <!--        {% endif %}-->
+                {% endfor %}
+                {% endif %}
+            </div>
         </div>
         <!--/ container end -->
     </section>
@@ -147,6 +167,7 @@
     <br>
     <!-- Footer start -->
     <div id="footer"></div>
+
 
 </div>
 <!-- Body inner end -->
@@ -180,6 +201,8 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"></script>
 <script src="{% static 'plugins/google-map/gmap.js' %}"></script>
 
+<script src="{% static 'plugins/sweetalert2/sweetalert2.min.js' %}"></script>
+
 <!-- Main Script -->
 <script src="{% static 'js/script.js' %}"></script>
 
@@ -191,6 +214,50 @@
             $(".navbar-toggler").click();
         }
     });
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 5000
+        });
+
+        $('.swalDefaultSuccess').show(function () {
+            Toast.fire({
+                type: 'success',
+                title: title
+            })
+        });
+        $('.swalDefaultInfo').show(function () {
+            Toast.fire({
+                type: 'info',
+                title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+            })
+        });
+        $('.swalDefaultError').show(function () {
+            console.log('ERROR')
+            Toast.fire({
+                type: 'error',
+                title: title
+            })
+        });
+        $('.swalDefaultWarning').show(function () {
+            Toast.fire({
+                type: 'warning',
+                title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+            })
+        });
+        $('.swalDefaultQuestion').show(function () {
+            Toast.fire({
+                type: 'question',
+                title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+            })
+        });
+    });
+
 </script>
 
 </body>

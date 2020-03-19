@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template.loader import render_to_string
@@ -73,9 +74,11 @@ def contact(request):
         })
         to_email = 'info@infinitisystems.co.in'
         email = EmailMessage(email_subject, message, to=[to_email])
-        email.send()
+        # email.send()
 
         # mail part end
+        print('query added')
+        messages.info(request, 'Message sent Successfully! We will revert back you soon.')
         return render(request, 'contact.html')
     else:
         return render(request, 'contact.html')
@@ -86,11 +89,13 @@ def createnewsletter(request):
         email_news = request.POST['email_news']
         if NewsLetter.objects.filter(email_news=email_news).exists():
             print('already registered')
-            return render(request, 'index.html')
+            messages.info(request, 'Already registered on this Email!')
+            return render(request, 'index.html', {'error': 'error'})
         else:
             newsletter = NewsLetter.objects.create(email_news=email_news)
             newsletter.save()
-            return redirect('/')
+            messages.info(request, 'Subscribed Successfully!')
+            return render(request, 'index.html', {'success': 'success'})
     else:
         print("Not Updated database")
 
