@@ -30,6 +30,8 @@
     <!-- Style Swicther -->
     <link id="style-switch" href="{% static 'css/presets/preset3.css' %}" media="screen" rel="stylesheet"
           type="text/css">
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="{% static 'plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css' %}">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
     <!--[if lt IE 9]>
@@ -139,27 +141,6 @@
                     </div>
                 </div>
             </div>
-            <div>
-                {% if messages %}
-                {% for message in messages %}
-                <!--        {% if error %}-->
-                <label class="swalDefaultError" hidden>
-                    <script>
-                        var title = `{{message}}`;
-                        console.log('test test')
-                    </script>
-                </label>
-                <!--        {% elif success %}-->
-                <label class="swalDefaultSuccess" hidden>
-                    <script>
-                        var title = `{{message}}`;
-                        console.log('test test')
-                    </script>
-                </label>
-                <!--        {% endif %}-->
-                {% endfor %}
-                {% endif %}
-            </div>
         </div>
         <!--/ container end -->
     </section>
@@ -167,7 +148,18 @@
     <br>
     <!-- Footer start -->
     <div id="footer"></div>
-
+    <div>
+        {% if messages %}
+        {% for message in messages %}
+        <label class="swalDefaultSuccess" hidden>
+            <script>
+                var title = `{{message}}`;
+                console.log('test test')
+            </script>
+        </label>
+        {% endfor %}
+        {% endif %}
+    </div>
 
 </div>
 <!-- Body inner end -->
@@ -219,8 +211,8 @@
 <script type="text/javascript">
     $(function () {
         const Toast = Swal.mixin({
-            toast: true,
-            position: 'top-end',
+            toast: false,
+            // position: 'top-end',
             showConfirmButton: false,
             timer: 5000
         });
