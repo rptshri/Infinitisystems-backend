@@ -76,8 +76,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'Infi Website',
         'USER': 'postgres',
-        # 'PASSWORD': 'Anil@1998',
-        'PASSWORD': 'admin',
+        'PASSWORD': 'Anil@1998',
+        # 'PASSWORD': 'admin',
         'HOST': 'localhost'
     }
 }
