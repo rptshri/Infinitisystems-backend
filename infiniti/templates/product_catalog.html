@@ -1,0 +1,260 @@
+{% load static %}
+<!-- Portfolio start -->
+<section id="portfolio" class="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 heading">
+                <span class="title-icon classic float-left"><i class="fa fa-suitcase"></i></span>
+                <h2 class="title classic">Our Awesome Work</h2>
+            </div>
+        </div>
+        <!-- Title row end -->
+
+        <!--Isotope filter start -->
+        <div class="row text-right">
+            <div class="col-12">
+                <div class="isotope-nav" data-isotope-nav="isotope">
+                    <ul>
+                        <li><a href="#" class="active" data-filter="*">All</a></li>
+                        <li><a href="#" data-filter=".Sensors">Sensors</a></li>
+                        <li><a href="#" data-filter=".Power">Power Products</a></li>
+                        <li><a href="#" data-filter=".Consult">Consultancy</a></li>
+                        <li><a href="#" data-filter=".Web">Web Services</a></li>
+                        <li><a href="#" data-filter=".3D">3D Printing</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Isotope filter end -->
+    </div>
+
+    <div class="container-fluid">
+        <div class="row isotope" id="isotope">
+            <div class="col-sm-3 Web isotope-item">
+                <div class="grid">
+                    <figure class="m-0 effect-oscar">
+                        <img src="{% static 'images/portfolio/portfolio3.jpg' %}" alt="">
+                        <figcaption>
+                            <h3>InfiIoT - The foolproof Iot Cloud Platform</h3>
+                            <a class="link icon-pentagon" href="InfiIoT"><i
+                                    class="fa fa-link"></i></a>
+                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/infi_iot2.jpg' %}"><i class="fa fa-search"></i></a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <!-- InfiIot end -->
+
+            <div class="col-sm-3 Power isotope-item">
+                <div class="grid">
+                    <figure class="m-0 effect-oscar">
+                        <img src="{% static 'images/portfolio/portfolio2.jpg' %}" alt="">
+                        <figcaption>
+                            <h3>Infi-Drive</h3>
+                            <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
+                                    class="fa fa-link"></i></a>
+                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/infi_iot2.jpg' %}"><i class="fa fa-search"></i></a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <!-- infi Drive end -->
+
+            <div class="col-sm-3 Sensors isotope-item">
+                <div class="grid">
+                    <figure class="m-0 effect-oscar">
+                        <img src="{% static 'images/portfolio/portfolio1.jpg' %}" alt="">
+                        <figcaption>
+                            <h3>Infi-Sense</h3>
+                            <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
+                                    class="fa fa-link"></i></a>
+                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg1.jpg' %}"><i class="fa fa-search"></i></a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <!-- infi sense end -->
+
+
+            <div class="col-sm-3 Sensors isotope-item">
+                <div class="grid">
+                    <figure class="m-0 effect-oscar">
+                        <img src="{% static 'images/portfolio/portfolio1.jpg' %}" alt="">
+                        <figcaption>
+                            <h3>Infi-Mesh</h3>
+                            <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
+                                    class="fa fa-link"></i></a>
+                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg1.jpg' %}"><i class="fa fa-search"></i></a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <!-- infi mesh end -->
+
+
+            <div class="col-sm-3 3D isotope-item">
+                <div class="grid">
+                    <figure class="m-0 effect-oscar">
+                        <img src="{% static 'images/portfolio/portfolio4.jpg' %}" alt="">
+                        <figcaption>
+                            <h3>Industry Grade Desktop Printer</h3>
+                            <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
+                                    class="fa fa-link"></i></a>
+                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg4.jpg' %}"><i class="fa fa-search"></i></a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <!-- 3D Printer end -->
+
+            <div class="col-sm-3 Consult isotope-item">
+                <div class="grid">
+                    <figure class="m-0 effect-oscar">
+                        <img src="{% static 'images/portfolio/portfolio3.jpg' %}" alt="">
+                        <figcaption>
+                            <h3>Industry Automation</h3>
+                            <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
+                                    class="fa fa-link"></i></a>
+                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg3.jpg' %}"><i class="fa fa-search"></i></a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <!-- Ind Automation  end -->
+
+            <div class="col-sm-3 Power isotope-item">
+                <div class="grid">
+                    <figure class="m-0 effect-oscar">
+                        <img src="{% static 'images/portfolio/portfolio2.jpg' %}" alt="">
+                        <figcaption>
+                            <h3>Remote Industry Power Analysis System</h3>
+                            <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
+                                    class="fa fa-link"></i></a>
+                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg2.jpg' %}"><i class="fa fa-search"></i></a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <!-- power analysis end -->
+
+            <div class="col-sm-3 Sensors isotope-item">
+                <div class="grid">
+                    <figure class="m-0 effect-oscar">
+                        <img src="{% static 'images/portfolio/portfolio1.jpg' %}" alt="">
+                        <figcaption>
+                            <h3>Infi-Weather</h3>
+                            <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
+                                    class="fa fa-link"></i></a>
+                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg1.jpg' %}"><i class="fa fa-search"></i></a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <!-- infi weather end -->
+
+            <div class="col-sm-3 Sensors isotope-item">
+                <div class="grid">
+                    <figure class="m-0 effect-oscar">
+                        <img src="{% static 'images/portfolio/portfolio1.jpg' %}" alt="">
+                        <figcaption>
+                            <h3>Infi-Gauge</h3>
+                            <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
+                                    class="fa fa-link"></i></a>
+                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg1.jpg' %}"><i class="fa fa-search"></i></a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <!-- infi gauge end -->
+
+            <div class="col-sm-3 Sensors isotope-item">
+                <div class="grid">
+                    <figure class="m-0 effect-oscar">
+                        <img src="{% static 'images/portfolio/portfolio1.jpg' %}" alt="">
+                        <figcaption>
+                            <h3>Infi-Leaf</h3>
+                            <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
+                                    class="fa fa-link"></i></a>
+                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg1.jpg' %}"><i class="fa fa-search"></i></a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <!-- infi leaf end -->
+
+            <div class="col-sm-3 Sensors isotope-item">
+                <div class="grid">
+                    <figure class="m-0 effect-oscar">
+                        <img src="{% static 'images/portfolio/portfolio1.jpg' %}" alt="">
+                        <figcaption>
+                            <h3>Infi-Soil/ Infi-ECE</h3>
+                            <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
+                                    class="fa fa-link"></i></a>
+                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg1.jpg' %}"><i class="fa fa-search"></i></a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <!-- infi soil end -->
+
+            <div class="col-sm-3 3D isotope-item">
+                <div class="grid">
+                    <figure class="m-0 effect-oscar">
+                        <img src="{% static 'images/portfolio/portfolio4.jpg' %}" alt="">
+                        <figcaption>
+                            <h3>3D Printing Services</h3>
+                            <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
+                                    class="fa fa-link"></i></a>
+                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg4.jpg' %}"><i class="fa fa-search"></i></a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <!-- 3D services end -->
+
+            <div class="col-sm-3 Consult isotope-item">
+                <div class="grid">
+                    <figure class="m-0 effect-oscar">
+                        <img src="{% static 'images/portfolio/portfolio3.jpg' %}" alt="">
+                        <figcaption>
+                            <h3>Smart Lab</h3>
+                            <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
+                                    class="fa fa-link"></i></a>
+                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg3.jpg' %}"><i class="fa fa-search"></i></a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <!-- Smart Lab end -->
+
+            <div class="col-sm-3 Power isotope-item">
+                <div class="grid">
+                    <figure class="m-0 effect-oscar">
+                        <img src="{% static 'images/portfolio/portfolio2.jpg' %}" alt="">
+                        <figcaption>
+                            <h3>Industry Grade Data Logger</h3>
+                            <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
+                                    class="fa fa-link"></i></a>
+                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg2.jpg' %}"><i class="fa fa-search"></i></a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <!-- Data logger end -->
+
+            <div class="col-sm-3 Consult isotope-item">
+                <div class="grid">
+                    <figure class="m-0 effect-oscar">
+                        <img src="{% static 'images/portfolio/portfolio3.jpg' %}" alt="">
+                        <figcaption>
+                            <h3>Earth Sense</h3>
+                            <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
+                                    class="fa fa-link"></i></a>
+                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg3.jpg' %}"><i class="fa fa-search"></i></a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <!-- Earth Sense end -->
+</section>
+<!-- Portfolio end -->

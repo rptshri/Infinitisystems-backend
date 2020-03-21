@@ -28,8 +28,7 @@
     <!-- Flexslider -->
     <link rel="stylesheet" href="{% static 'plugins/cd-hero/cd-hero.css' %}">
     <!-- Style Swicther -->
-    <link id="style-switch" href="{% static 'css/presets/preset3.css' %}" media="screen" rel="stylesheet"
-          type="text/css">
+    <link id="style-switch" href="{% static 'css/presets/preset3.css' %}" media="screen" rel="stylesheet" type="text/css">
     <!-- SweetAlert2 -->
     <link rel="stylesheet" href="{% static 'plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css' %}">
 
@@ -40,11 +39,10 @@
     <![endif]-->
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.js"
-            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
     </script>
     <script>
-        $(function () {
+        $(function() {
             $("#header").load("headerpage");
             $("#footer").load("footerpage");
             $("#counter").load("counterpage");
@@ -55,7 +53,7 @@
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
     <!--Favicon-->
-    <link rel="icon" href="{% static 'images/favicon/logo.png' %}" type="image/x-icon"/>
+    <link rel="icon" href="{% static 'images/favicon/logo.png' %}" type="image/x-icon" />
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static 'img/favicon/favicon-144x144.png' %}">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static 'img/favicon/favicon-72x72.png' %}">
     <link rel="apple-touch-icon-precomposed" href="{% static 'img/favicon/favicon-54x54.png' %}">
@@ -65,151 +63,152 @@
 <body>
 
 
-<div class="body-inner">
+    <div class="body-inner">
 
-    <!-- Header start -->
-    <div id="header"></div>
-    <!--/ Header end -->
+        <!-- Header start -->
+        <div id="header"></div>
+        <!--/ Header end -->
 
-    <div id="banner-area">
-        <img src="{% static 'images/banner/contact.jpg' %}" style="width: 100%; height: 100%; background-size: cover;"
-             alt=""/>
-        <div class="parallax-overlay"></div>
-        <!-- Subpage title start -->
-        <div class="banner-title-content">
-            <div class="text-center">
-                <h2>Contact Us</h2>
-            </div>
-        </div>
-        <!-- Subpage title end -->
-    </div>
-    <!-- Banner area end -->
-
-    <!-- Main container start -->
-    <section id="main-container">
-        <div class="container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15133.81339798439!2d73.7935986!3d18.5084045!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9108dabe6228a5d6!2sInfiniti%20Systems!5e0!3m2!1sen!2sin!4v1582440518429!5m2!1sen!2sin"
-                    width="100%"
-                    height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-            <div class="row">
-                <div class="col-md-7">
-                    <form id="contact-form" action="contact" method="post" role="form">
-                        {% csrf_token %}
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Name</label>
-                                    <input class="form-control" name="name" id="name" placeholder="" type="text"
-                                           required>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Email</label>
-                                    <input class="form-control" name="email" id="email" placeholder="" type="email"
-                                           required>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Subject</label>
-                                    <input class="form-control" name="subject" id="subject" placeholder="" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label>Message</label>
-                            <textarea class="form-control" name="message" id="message" placeholder="" rows="10"
-                                      required></textarea>
-                        </div>
-                        <div class="text-right"><br>
-                            <button class="btn btn-primary solid blank" type="submit">Send Message</button>
-                        </div>
-                    </form>
+        <div id="banner-area">
+            <img src="{% static 'images/banner/contact.jpg' %}" style="width: 100%; height: 100%; background-size: cover;" alt="" />
+            <div class="parallax-overlay"></div>
+            <!-- Subpage title start -->
+            <div class="banner-title-content">
+                <div class="text-center">
+                    <h2>Contact Us</h2>
                 </div>
-                <div class="col-md-5">
-                    <div class="contact-info">
-                        <h3>We'd love to hear from you</h3>
-                        <p>whether you have a question about our services, products, pricing, need technical documents
-                            or a demo, or anything else, our team is ready to answer all your questions
-                        </p>
-                        <br>
-                        <p><i class="fa fa-home info"></i> Bandal Dhankude Plaza, Kothrud Pune-411038 </p>
-                        <p><i class="fa fa-phone info"></i> +(91) 9405435681 </p>
-                        <p><i class="fa fa-envelope-o info"></i> info@infinitisystems.co.in</p>
-                        <p><i class="fa fa-globe info"></i> www.infinitisystems.co.in</p>
+            </div>
+            <!-- Subpage title end -->
+        </div>
+        <!-- Banner area end -->
+
+
+        <!-- Main container start -->
+        <section id="main-container">
+            <div class="container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15133.81339798439!2d73.7935986!3d18.5084045!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9108dabe6228a5d6!2sInfiniti%20Systems!5e0!3m2!1sen!2sin!4v1582440518429!5m2!1sen!2sin" width="100%"
+                    height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                <div class="row">
+                    <div class="col-md-7">
+                        <form id="contact-form" action="contact" method="post" role="form">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Name</label>
+                                        <input class="form-control" name="name" id="name" placeholder="" type="text" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Email</label>
+                                        <input class="form-control" name="email" id="email" placeholder="" type="email" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Subject</label>
+                                        <input class="form-control" name="subject" id="subject" placeholder="" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Message</label>
+                                <textarea class="form-control" name="message" id="message" placeholder="provide your phone number to help us revert back to you quicker." rows=" 10 " required></textarea>
+                            </div>
+                            <div class="text-right "><br>
+                                <button class="btn btn-primary solid blank " type="submit ">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-5 ">
+                        <div class="contact-info ">
+                            <h3>We'd love to hear from you</h3>
+                            <p>whether you have a question about our services, products, pricing, need technical documents or a demo, or anything else, our team is ready to answer all your questions
+                            </p>
+                            <br>
+                            <p><i class="fa fa-home info "></i> Bandal Dhankude Plaza, Kothrud Pune-411038 </p>
+                            <p><i class="fa fa-phone info "></i> +(91) 9405435681 </p>
+                            <p><i class="fa fa-envelope-o info "></i> info@infinitisystems.co.in</p>
+                            <p><i class="fa fa-globe info "></i> www.infinitisystems.co.in</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!--/ container end -->
-    </section>
-    <!--/ Main container end -->
-    <br>
-    <!-- Footer start -->
-    <div id="footer"></div>
-    <div>
-        {% if messages %}
-        {% for message in messages %}
-        <label class="swalDefaultSuccess" hidden>
-            <script>
-                var title = `{{message}}`;
-                console.log('test test')
-            </script>
-        </label>
-        {% endfor %}
-        {% endif %}
-    </div>
+            <!--/ container end -->
+        </section>
+        <!--/ Main container end -->
+        <br>
+        <!-- Footer start -->
+        <div id="footer"></div>
+        <div>
+            {% if messages %} {% for message in messages %} {% if error %}
+            <label class="swalDefaultError" hidden>
+                <script>
+                    var title = `{{message}}`;
+                    console.log('test test')
+                </script>
+            </label> {% elif success %}
+            <label class="swalDefaultSuccess" hidden>
+                <script>
+                    var title = `{{message}}`;
+                    console.log('test test')
+                </script>
+            </label> {% endif %} {% endfor %} {% endif %}
 
-</div>
-<!-- Body inner end -->
+        </div>
+        <!-- Body inner end -->
+</body>
+
+</html>
+
 
 <!-- jQuery -->
-<script src="{% static 'plugins/jQuery/jquery.min.js' %}"></script>
+<script src="{% static 'plugins/jQuery/jquery.min.js' %} "></script>
 <!-- Bootstrap JS -->
-<script src="{% static 'plugins/bootstrap/bootstrap.min.js' %}"></script>
+<script src="{% static 'plugins/bootstrap/bootstrap.min.js' %} "></script>
 <!-- Style Switcher -->
-<script type="text/javascript" src="{% static 'plugins/style-switcher.js' %}"></script>
+<script type="text/javascript " src="{% static 'plugins/style-switcher.js' %} "></script>
 <!-- Owl Carousel -->
-<script type="text/javascript" src="{% static 'plugins/owl/owl.carousel.js' %}"></script>
+<script type="text/javascript " src="{% static 'plugins/owl/owl.carousel.js' %} "></script>
 <!-- PrettyPhoto -->
-<script type="text/javascript" src="{% static 'plugins/jquery.prettyPhoto.js' %}"></script>
+<script type="text/javascript " src="{% static 'plugins/jquery.prettyPhoto.js' %} "></script>
 <!-- Bxslider -->
-<script type="text/javascript" src="{% static 'plugins/flex-slider/jquery.flexslider.js' %}"></script>
+<script type="text/javascript " src="{% static 'plugins/flex-slider/jquery.flexslider.js' %} "></script>
 <!-- CD Hero slider -->
-<script type="text/javascript" src="{% static 'plugins/cd-hero/cd-hero.js' %}"></script>
+<script type="text/javascript " src="{% static 'plugins/cd-hero/cd-hero.js' %} "></script>
 <!-- Isotope -->
-<script type="text/javascript" src="{% static 'plugins/isotope.js' %}"></script>
-<script type="text/javascript" src="{% static 'plugins/ini.isotope.js' %}"></script>
+<script type="text/javascript " src="{% static 'plugins/isotope.js' %} "></script>
+<script type="text/javascript " src="{% static 'plugins/ini.isotope.js' %} "></script>
 <!-- Wow Animation -->
-<script type="text/javascript" src="{% static 'plugins/wow.min.js' %}"></script>
+<script type="text/javascript " src="{% static 'plugins/wow.min.js' %} "></script>
 <!-- Eeasing -->
-<script type="text/javascript" src="{% static 'plugins/jquery.easing.1.3.js' %}"></script>
+<script type="text/javascript " src="{% static 'plugins/jquery.easing.1.3.js' %} "></script>
 <!-- Counter -->
-<script type="text/javascript" src="{% static 'plugins/jquery.counterup.min.js' %}"></script>
+<script type="text/javascript " src="{% static 'plugins/jquery.counterup.min.js' %} "></script>
 <!-- Waypoints -->
-<script type="text/javascript" src="{% static 'plugins/waypoints.min.js' %}"></script>
+<script type="text/javascript " src="{% static 'plugins/waypoints.min.js' %} "></script>
 <!-- google map -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"></script>
-<script src="{% static 'plugins/google-map/gmap.js' %}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places "></script>
+<script src="{% static 'plugins/google-map/gmap.js' %} "></script>
 
-<script src="{% static 'plugins/sweetalert2/sweetalert2.min.js' %}"></script>
+<script src="{% static 'plugins/sweetalert2/sweetalert2.min.js' %} "></script>
 
 <!-- Main Script -->
-<script src="{% static 'js/script.js' %}"></script>
+<script src="{% static 'js/script.js' %} "></script>
 
 <script>
-    $(document).click(function (event) {
+    $(document).click(function(event) {
         var clickover = $(event.target);
-        var _opened = $(".navbar-collapse").hasClass("show");
-        if (_opened === true && !clickover.hasClass("navbar-toggler")) {
-            $(".navbar-toggler").click();
+        var _opened = $(".navbar-collapse ").hasClass("show ");
+        if (_opened === true && !clickover.hasClass("navbar-toggler ")) {
+            $(".navbar-toggler ").click();
         }
     });
 </script>
 
-<script type="text/javascript">
-    $(function () {
+<script type="text/javascript ">
+    $(function() {
         const Toast = Swal.mixin({
             toast: false,
             // position: 'top-end',
@@ -217,41 +216,36 @@
             timer: 5000
         });
 
-        $('.swalDefaultSuccess').show(function () {
+        $('.swalDefaultSuccess').show(function() {
             Toast.fire({
                 type: 'success',
                 title: title
             })
         });
-        $('.swalDefaultInfo').show(function () {
+        $('.swalDefaultInfo').show(function() {
             Toast.fire({
                 type: 'info',
                 title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
             })
         });
-        $('.swalDefaultError').show(function () {
+        $('.swalDefaultError').show(function() {
             console.log('ERROR')
             Toast.fire({
                 type: 'error',
                 title: title
             })
         });
-        $('.swalDefaultWarning').show(function () {
+        $('.swalDefaultWarning').show(function() {
             Toast.fire({
                 type: 'warning',
                 title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
             })
         });
-        $('.swalDefaultQuestion').show(function () {
+        $('.swalDefaultQuestion').show(function() {
             Toast.fire({
                 type: 'question',
                 title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
             })
         });
     });
-
 </script>
-
-</body>
-
-</html>
