@@ -1,263 +1,138 @@
 {% load static %}
-<!-- Portfolio start -->
-<section id="portfolio" class="portfolio">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 heading">
-                <span class="title-icon classic float-left"><i class="fa fa-suitcase"></i></span>
-                <h2 class="title classic">Our Awesome Work</h2>
-            </div>
-        </div>
-        <!-- Title row end -->
+<!DOCTYPE html>
+<html lang="zxx">
 
-        <!--Isotope filter start -->
-        <div class="row text-right">
-            <div class="col-12">
-                <div class="isotope-nav" data-isotope-nav="isotope">
-                    <ul>
-                        <li><a href="#" class="active" data-filter="*">All</a></li>
-                        <li><a href="#" data-filter=".Sensors">Sensors</a></li>
-                        <li><a href="#" data-filter=".Power">Power Products</a></li>
-                        <li><a href="#" data-filter=".Consult">Consultancy</a></li>
-                        <li><a href="#" data-filter=".Web">Web Services</a></li>
-                        <li><a href="#" data-filter=".3D">3D Printing</a></li>
-                    </ul>
+<head>
+    <meta charset="utf-8">
+    <title>Products - Sensors, Consultancy & Web Services | Infiniti Systems</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="Infiniti System's catalog of wide range of data monitoring and logging products. All products are modifiable according to users needs. Dive-in to know about what we can offer">
+
+
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="theme-color" content="#000000">
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css' %}">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="{% static 'plugins/fontawesome/font-awesome.min.css' %}">
+    <!-- Animation -->
+    <link rel="stylesheet" href="{% static 'plugins/animate.css' %}">
+    <!-- Prettyphoto -->
+    <link rel="stylesheet" href="{% static 'plugins/prettyPhoto.css' %}">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="{% static 'plugins/owl/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'plugins/owl/owl.theme.css' %}">
+    <!-- Flexslider -->
+    <link rel="stylesheet" href="{% static 'plugins/flex-slider/flexslider.css' %}">
+    <!-- Flexslider -->
+    <link rel="stylesheet" href="{% static 'plugins/cd-hero/cd-hero.css' %}">
+    <!-- Style Swicther -->
+    <link id="style-switch" href="{% static 'css/presets/preset3.css' %}" media="screen" rel="stylesheet" type="text/css">
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="{% static 'plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css' %}">
+
+    <!-- Page Loader -->
+    <script src="{% static 'plugins/jquery-3.3.1.js' %}">
+    </script>
+    <script>
+        $(function() {
+            $("#header").load("headerpage");
+            $("#footer").load("footerpage");
+            //$("#catalog").load("catalogpage");
+        });
+    </script>
+
+    <!-- Main Stylesheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+    <!--Favicon-->
+    <link rel="icon" href="{% static 'images/favicon/logo.png' %}" type="image/x-icon" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static 'img/favicon/favicon-144x144.png' %}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static 'img/favicon/favicon-72x72.png' %}">
+    <link rel="apple-touch-icon-precomposed" href="{% static 'img/favicon/favicon-54x54.png' %}">
+
+</head>
+
+<body>
+
+    <div class="body-inner">
+
+        <!-- Header start -->
+        <div id="header"></div>
+
+        <!-- Bannerstart -->
+        <div id="banner-area">
+            <img src="{% static 'images/banner/products.jpg' %}" style="width: 100%; height: 100%; background-size: cover;" alt="" />
+            <div class="parallax-overlay"></div>
+            <!-- Subpage title start -->
+            <div class="banner-title-content">
+                <div class="text-center">
+                    <h2>Products</h2>
+                    </nav>
                 </div>
             </div>
+            <!-- Subpage title end -->
         </div>
-        <!-- Isotope filter end -->
+        <!-- Banner area end -->
+
+        <!-- <div id="catalog"></div> -->
+
+        {% block content %} {% endblock %}
+
+        <div class="gap-40"></div>
+
+        <div id="footer"></div>
+
     </div>
-
-    <div class="container-fluid">
-        <div class="row isotope" id="isotope">
-            <div class="col-sm-3 Web isotope-item">
-                <div class="grid">
-                    <figure class="m-0 effect-oscar">
-                        <img src="{% static 'images/portfolio/infi-iot0.jpg' %}" alt="">
-                        <figcaption>
-                            <h3>InfiIoT - Futuristic Iot Cloud Platform</h3>
-                            <a class="link icon-pentagon" href="InfiIoT"><i
-                                    class="fa fa-link"></i></a>
-                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/infi-iot1.jpg' %}"><i class="fa fa-search"></i></a>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-            <!-- InfiIot end -->
-
-            <div class="col-sm-3 Power isotope-item">
-                <div class="grid">
-                    <figure class="m-0 effect-oscar">
-                        <img src="{% static 'images/portfolio/infidrive-0.jpg' %}" alt="">
-                        <figcaption>
-                            <h3>InfiDrive - Smart Motor Driver</h3>
-                            <a class="link icon-pentagon" href="infidrive"><i
-                                    class="fa fa-link"></i></a>
-                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/infidrive-1.jpg' %}"><i class="fa fa-search"></i></a>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-            <!-- infi Drive end -->
-
-            <div class="col-sm-3 Sensors isotope-item">
-                <div class="grid">
-                    <figure class="m-0 effect-oscar">
-                        <img src="{% static 'images/portfolio/infisense-0.jpg' %}" alt="">
-                        <figcaption>
-                            <h3>Infi Sense - IoT the Smart way</h3>
-                            <a class="link icon-pentagon" href="infisense"><i
-                                    class="fa fa-link"></i></a>
-                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/infisense-1.jpg' %}"><i class="fa fa-search"></i></a>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-            <!-- infi sense end -->
+    <!-- Body inner end -->
 
 
-            <div class="col-sm-3 Sensors isotope-item">
-                <div class="grid">
-                    <figure class="m-0 effect-oscar">
-                        <img src="{% static 'images/portfolio/infimesh-0.jpg' %}" alt="">
-                        <figcaption>
-                            <h3>Infi Mesh - Connect to future</h3>
-                            <a class="link icon-pentagon" href="infimesh"><i
-                                    class="fa fa-link"></i></a>
-                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/infimesh-1.jpg' %}"><i class="fa fa-search"></i></a>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-            <!-- infi mesh end -->
+    <!-- jQuery -->
+    <script src="{% static 'plugins/jQuery/jquery.min.js' %}"></script>
+    <!-- Bootstrap JS -->
+    <script src="{% static 'plugins/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- Style Switcher -->
+    <script type="text/javascript" src="{% static 'plugins/style-switcher.js' %}"></script>
+    <!-- Owl Carousel -->
+    <script type="text/javascript" src="{% static 'plugins/owl/owl.carousel.js' %}"></script>
+    <!-- PrettyPhoto -->
+    <script type="text/javascript" src="{% static 'plugins/jquery.prettyPhoto.js' %}"></script>
+    <!-- Bxslider -->
+    <script type="text/javascript" src="{% static 'plugins/flex-slider/jquery.flexslider.js' %}"></script>
+    <!-- CD Hero slider -->
+    <script type="text/javascript" src="{% static 'plugins/cd-hero/cd-hero.js' %}"></script>
+    <!-- Isotope -->
+    <script type="text/javascript" src="{% static 'plugins/isotope.js' %}"></script>
+    <script type="text/javascript" src="{% static 'plugins/ini.isotope.js' %}"></script>
+    <!-- Wow Animation -->
+    <script type="text/javascript" src="{% static 'plugins/wow.min.js' %}"></script>
+    <!-- Eeasing -->
+    <script type="text/javascript" src="{% static 'plugins/jquery.easing.1.3.js' %}"></script>
+    <!-- Counter -->
+    <script type="text/javascript" src="{% static 'plugins/jquery.counterup.min.js' %}"></script>
+    <!-- Waypoints -->
+    <script type="text/javascript" src="{% static 'plugins/waypoints.min.js' %}"></script>
 
+    <!-- SweetAlert2 -->
+    <script src="{% static 'plugins/sweetalert2/sweetalert2.min.js' %}"></script>
 
-            <div class="col-sm-3 3D isotope-item">
-                <div class="grid">
-                    <figure class="m-0 effect-oscar">
-                        <img src="{% static 'images/portfolio/printer-0.jpg' %}" alt="">
-                        <figcaption>
-                            <h3>Industry Grade Desktop Printer</h3>
-                            <a class="link icon-pentagon" href="printer"><i
-                                    class="fa fa-link"></i></a>
-                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/printer-1.jpg' %}"><i class="fa fa-search"></i></a>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-            <!--  3D Printer end -->
+    <!-- Main Script -->
+    <script src="{% static 'js/script.js' %}"></script>
 
-            <!-- <div class="col-sm-3 Consult isotope-item">
-                <div class="grid">
-                    <figure class="m-0 effect-oscar">
-                        <img src="{% static 'images/portfolio/portfolio3.jpg' %}" alt="">
-                        <figcaption>
-                            <h3>Industry Automation</h3>
-                            <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
-                                    class="fa fa-link"></i></a>
-                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg3.jpg' %}"><i class="fa fa-search"></i></a>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div> -->
-            <!-- Ind Automation end -->
+    <script>
+        $(document).click(function(event) {
+            var clickover = $(event.target);
+            var _opened = $(".navbar-collapse").hasClass("show");
+            if (_opened === true && !clickover.hasClass("navbar-toggler")) {
+                $(".navbar-toggler").click();
+            }
+        });
+    </script>
 
+</body>
 
-            <div class="col-sm-3 3D isotope-item">
-                <div class="grid">
-                    <figure class="m-0 effect-oscar">
-                        <img src="{% static 'images/portfolio/printer-0.jpg' %}" alt="">
-                        <figcaption>
-                            <h3>Remote Industry Power Analysis System</h3>
-                            <a class="link icon-pentagon" href="poweranalysis"><i
-                                    class="fa fa-link"></i></a>
-                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/poweranalysis-1.jpg' %}"><i class="fa fa-search"></i></a>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-            <!-- power analysis end -->
-
-            <div class="col-sm-3 Sensors isotope-item">
-                <div class="grid">
-                    <figure class="m-0 effect-oscar">
-                        <img src="{% static 'images/portfolio/portfolio1.jpg' %}" alt="">
-                        <figcaption>
-                            <h3>Infi-Weather</h3>
-                            <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
-                                    class="fa fa-link"></i></a>
-                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg1.jpg' %}"><i class="fa fa-search"></i></a>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-            <!-- infi weather end -->
-
-            <div class="col-sm-3 Sensors isotope-item">
-                <div class="grid">
-                    <figure class="m-0 effect-oscar">
-                        <img src="{% static 'images/portfolio/portfolio1.jpg' %}" alt="">
-                        <figcaption>
-                            <h3>Infi-Gauge</h3>
-                            <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
-                                    class="fa fa-link"></i></a>
-                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg1.jpg' %}"><i class="fa fa-search"></i></a>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-            <!-- infi gauge end -->
-
-            <div class="col-sm-3 Sensors isotope-item">
-                <div class="grid">
-                    <figure class="m-0 effect-oscar">
-                        <img src="{% static 'images/portfolio/portfolio1.jpg' %}" alt="">
-                        <figcaption>
-                            <h3>Infi-Leaf</h3>
-                            <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
-                                    class="fa fa-link"></i></a>
-                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg1.jpg' %}"><i class="fa fa-search"></i></a>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-            <!-- infi leaf end -->
-
-            <div class="col-sm-3 Sensors isotope-item">
-                <div class="grid">
-                    <figure class="m-0 effect-oscar">
-                        <img src="{% static 'images/portfolio/portfolio1.jpg' %}" alt="">
-                        <figcaption>
-                            <h3>Infi-Soil/ Infi-ECE</h3>
-                            <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
-                                    class="fa fa-link"></i></a>
-                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg1.jpg' %}"><i class="fa fa-search"></i></a>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-            <!-- infi soil end -->
-
-            <div class="col-sm-3 3D isotope-item">
-                <div class="grid">
-                    <figure class="m-0 effect-oscar">
-                        <img src="{% static 'images/portfolio/portfolio4.jpg' %}" alt="">
-                        <figcaption>
-                            <h3>3D Printing Services</h3>
-                            <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
-                                    class="fa fa-link"></i></a>
-                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg4.jpg' %}"><i class="fa fa-search"></i></a>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-            <!-- 3D services end -->
-
-            <div class="col-sm-3 Consult isotope-item">
-                <div class="grid">
-                    <figure class="m-0 effect-oscar">
-                        <img src="{% static 'images/portfolio/portfolio3.jpg' %}" alt="">
-                        <figcaption>
-                            <h3>Smart Lab</h3>
-                            <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
-                                    class="fa fa-link"></i></a>
-                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg3.jpg' %}"><i class="fa fa-search"></i></a>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-            <!-- Smart Lab end -->
-
-            <div class="col-sm-3 Power isotope-item">
-                <div class="grid">
-                    <figure class="m-0 effect-oscar">
-                        <img src="{% static 'images/portfolio/portfolio2.jpg' %}" alt="">
-                        <figcaption>
-                            <h3>Industry Grade Data Logger</h3>
-                            <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
-                                    class="fa fa-link"></i></a>
-                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg2.jpg' %}"><i class="fa fa-search"></i></a>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-            <!-- Data logger end -->
-
-            <div class="col-sm-3 Consult isotope-item">
-                <div class="grid">
-                    <figure class="m-0 effect-oscar">
-                        <img src="{% static 'images/portfolio/portfolio3.jpg' %}" alt="">
-                        <figcaption>
-                            <h3>Earth Sense</h3>
-                            <a class="link icon-pentagon" href="{% static 'portfolio-item.html' %}"><i
-                                    class="fa fa-link"></i></a>
-                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/portfolio-bg3.jpg' %}"><i class="fa fa-search"></i></a>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-            <!-- Earth Sense end -->
-        </div>
-    </div>
-</section>
-<!-- Portfolio end -->
+</html>

@@ -18,6 +18,9 @@ def footer(request):
     LatestTechNews = LatestTech.objects.all()
     return render(request, 'footer.html', {'LatestTechNews': LatestTechNews})
 
+def tag(request):
+    return render(request, 'tag.html')
+
 
 def counter(request):
     count = Counter.objects.get(id=1)
