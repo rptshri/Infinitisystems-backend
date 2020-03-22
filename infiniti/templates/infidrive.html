@@ -4,9 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Products - Sensors, Consultancy & Web Services | Infiniti Systems</title>
+    <title>Infi-Drive - Easy and Powerfull Motor Driver | Infiniti Systems</title>
     <meta name="keywords" content="">
-    <meta name="description" content="Infiniti System's catalog of wide range of data monitoring and logging products. All products are modifiable according to users needs. Dive-in to know about what we can offer">
+    <meta name="description" content="Infiniti System's Infi-Drive is a high power, easy to use, highly Configurable single drive motor Driver. Contact us to know more about IoT cloud.">
 
 
     <!-- mobile responsive meta -->
@@ -35,14 +35,15 @@
     <!-- SweetAlert2 -->
     <link rel="stylesheet" href="{% static 'plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css' %}">
 
-    <!-- Page Loader -->
+
+
+
     <script src="{% static 'plugins/jquery-3.3.1.js' %}">
     </script>
     <script>
         $(function() {
             $("#header").load("headerpage");
             $("#footer").load("footerpage");
-            $("#catalog").load("catalogpage");
         });
     </script>
 
@@ -60,16 +61,15 @@
 <body>
 
     <div class="body-inner">
-
-        <!-- Header start -->
         <div id="header"></div>
+
         <div id="banner-area">
-            <img src="{% static 'images/banner/products.jpg' %}" style="width: 100%; height: 100%; background-size: cover;" alt="" />
+            <img src="{% static 'images/banner/infidrive-banner.jpg' %}" style="width: 100%; height: 100%; background-size: cover;" alt="" />
             <div class="parallax-overlay"></div>
             <!-- Subpage title start -->
             <div class="banner-title-content">
                 <div class="text-center">
-                    <h2>Products</h2>
+                    <h2>Infi IoT</h2>
                     </nav>
                 </div>
             </div>
@@ -77,20 +77,85 @@
         </div>
         <!-- Banner area end -->
 
-        <div id="catalog"></div>
+        <!-- Portfolio item start -->
+        <section id="portfolio-item">
+            <div class="container">
+                <!-- Portfolio item row start -->
+                <div class="row">
+                    <!-- Portfolio item slider start -->
+                    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                        <div class="portfolio-slider">
+                            <div class="flexportfolio flexslider">
+                                <ul class="slides">
+                                    <li><img src="{% static 'images/portfolio/infidrive-1.jpg' %}" alt="" /></li>
+                                    <li><img src="{% static 'images/portfolio/infidrive-2.jpg' %}" alt="" /></li>
+                                    <li><img src="{% static 'images/portfolio/infidrive-3.jpg' %}" alt="" /></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portfolio item slider end -->
 
-        <div class="gap-40"></div>
+                    <!-- sidebar start -->
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="sidebar">
+                            <div class="portfolio-desc">
+                                <h3 class="title-border">About Infi-Drive</h3>
+                                <p>Infi Drive is an Easy to use, Closed loop motor driver with overvoltage, overcurrent protection, constant rpm modes, Goto position, position hold modes, and easy i2c, pwn, servo interfaces, infi Drive is one step solution
+                                    for your needs.</p>
+                                <br />
+                                <h3>Features</h3>
+                                <ul>
+                                    <li>
+                                        Works from 8V to 30V/50V(for HV model)
+                                    </li>
+                                    <li>
+                                        Max current capacity 60A cont 120A pulse 10% Duty
+                                    </li>
+                                    <li>
+                                        All modes have tunable parameters
+                                    </li>
+                                    <li>
+                                        Integrated Self test
+                                    </li>
+                                    <li>
+                                        I2c address set by Dip switch
+                                    </li>
+                                </ul>
 
+                                <h3>Applications</h3>
+                                <ul>
+                                    <li>
+                                        Motor Driver for Industrial and robotics.
+                                    </li>
+                                </ul>
+                                <br />
+
+                                <p>
+                                    <!-- <a href="http://www.infiiot.com" class="project-btn btn btn-primary">Visit Website</a> -->
+                                    <a href="contact" class="project-btn btn btn-primary">Contact Us!</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- sidebar end -->
+                </div>
+                <!-- Portfolio item row end -->
+            </div>
+            <!-- Container end -->
+        </section>
+        <!-- Portfolio item end -->
+
+        <!-- <div class="gap-10"></div> -->
+
+        <!-- Footer start -->
         <div id="footer"></div>
-
     </div>
     <!-- Body inner end -->
-
-
-
 </body>
 
 </html>
+
 
 <!-- jQuery -->
 <script src="{% static 'plugins/jQuery/jquery.min.js' %}"></script>

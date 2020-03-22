@@ -17,6 +17,9 @@ urlpatterns = [
     path('careers', views.careers, name='careers'),
     path('contact', views.contact, name='contact'),
     path('InfiIoT', views.infiiot, name='InfiIoT'),
+    path('infidrive', views.infidrive, name='infidrive'),
+    path('infisense', views.infisense, name='infisense'),
+    path('infimesh', views.infimesh, name='infimesh'),
     path('createnewsletter', views.createnewsletter, name='createnewsletter')
 
 ]

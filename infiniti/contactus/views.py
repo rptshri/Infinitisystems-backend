@@ -60,6 +60,16 @@ def careers(request):
 def infiiot(request):
     return render(request, 'infiiot.html')
 
+def infidrive(request):
+    return render(request, 'infidrive.html')
+
+def infisense(request):
+    return render(request, 'infisense.html')
+
+def infimesh(request):
+    return render(request, 'infimesh.html')
+
+
 
 def contact(request):
     if request.method == 'POST':
