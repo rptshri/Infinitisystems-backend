@@ -69,6 +69,11 @@ def infisense(request):
 def infimesh(request):
     return render(request, 'infimesh.html')
 
+def printer(request):
+    return render(request, 'printer.html')
+
+def poweranalysis(request):
+    return render(request, 'poweranalysis.html')
 
 
 def contact(request):

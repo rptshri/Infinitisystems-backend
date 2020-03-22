@@ -20,6 +20,8 @@ urlpatterns = [
     path('infidrive', views.infidrive, name='infidrive'),
     path('infisense', views.infisense, name='infisense'),
     path('infimesh', views.infimesh, name='infimesh'),
+    path('printer', views.printer, name='printer'),
+    path('poweranalysis', views.poweranalysis, name='poweranalysis'),
     path('createnewsletter', views.createnewsletter, name='createnewsletter')
 
 ]
