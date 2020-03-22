@@ -6,7 +6,8 @@
     <meta charset="utf-8">
     <title>Industrial Consultancy - quality & speed are our focus | Infiniti Systems</title>
     <meta name="keywords" content="">
-    <meta name="description" content="Infiniti System is leader in developing and optimizing your Innovations & Operational process. Connect with Us to know more about what we can offer!">
+    <meta name="description"
+        content="Infiniti System is leader in developing and optimizing your Innovations & Operational process. Connect with Us to know more about what we can offer!">
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,12 +31,13 @@
     <!-- Flexslider -->
     <link rel="stylesheet" href="{% static 'plugins/cd-hero/cd-hero.css' %}">
     <!-- Style Swicther -->
-    <link id="style-switch" href="{% static 'css/presets/preset3.css' %}" media="screen" rel="stylesheet" type="text/css">
+    <link id="style-switch" href="{% static 'css/presets/preset3.css' %}" media="screen" rel="stylesheet"
+        type="text/css">
 
     <script src="{% static 'plugins/jquery-3.3.1.js' %}">
     </script>
     <script>
-        $(function() {
+        $(function () {
             $("#header").load("headerpage");
             $("#footer").load("footerpage");
             $("#tag").load("tagpage");
@@ -62,7 +64,8 @@
         <!--/ Header end -->
 
         <div id="banner-area">
-            <img src="{% static 'images/banner/consult.jpg' %}" style="width: 100%; height: 100%; background-size: cover;" alt="Consultancy" />
+            <img src="{% static 'images/banner/consult.jpg' %}"
+                style="width: 100%; height: 100%; background-size: cover;" alt="Consultancy" />
             <div class="parallax-overlay"></div>
             <!-- Subpage title start -->
             <div class="banner-title-content">
@@ -93,8 +96,11 @@
                                 <img src="{% static 'images/pages/s2.jpg' %}" class="img-fluid" alt="" />
                             </div>
                             <!-- post image end -->
-                            <p>Our team are experts in developing and optimizing your Innovations & Operational process. With our experience in various industries we are all set to help you design a product that delivers a great experience for your target
-                                market. In all this improved productivity, customer orientation, quality and speed are our focus. Connect with Us to know more about what we can offer!</p>
+                            <p>Our team are experts in developing and optimizing your Innovations & Operational process.
+                                With our experience in various industries we are all set to help you design a product
+                                that delivers a great experience for your target
+                                market. In all this improved productivity, customer orientation, quality and speed are
+                                our focus. Connect with Us to know more about what we can offer!</p>
 
                             <div class="gap-20"></div>
 
@@ -145,7 +151,7 @@
                     </div>
                     <!--/ Content col end -->
 
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 tagsSidebar">
                         <div class="sidebar sidebar-right">
                             <!-- tags start -->
                             <div id="tag"></div>
@@ -200,7 +206,7 @@
     <script src="{% static 'js/script.js' %}"></script>
 
     <script>
-        $(document).click(function(event) {
+        $(document).click(function (event) {
             var clickover = $(event.target);
             var _opened = $(".navbar-collapse").hasClass("show");
             if (_opened === true && !clickover.hasClass("navbar-toggler")) {

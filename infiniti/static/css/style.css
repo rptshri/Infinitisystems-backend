@@ -3428,6 +3428,10 @@ a.close-styler {
     width: 80px;
     height: auto;
   }
+
+  .tagsSidebar{
+    display: none;
+  }
 }
 
 /* Custom, iPhone Retina */
