@@ -26,9 +26,6 @@ def counter(request):
     count = Counter.objects.get(id=1)
     return render(request, 'counter.html', {'count': count})
 
-def catalog(request):
-    return render(request, 'product_catalog.html')
-
 
 def s1(request):
     return render(request, 's1.html')
@@ -78,6 +75,27 @@ def printer(request):
 def poweranalysis(request):
     return render(request, 'poweranalysis.html')
 
+def infiweather(request):
+    return render(request, 'infiweather.html')
+
+def infigauge(request):
+    return render(request, 'infigauge.html')
+
+def infileaf(request):
+    return render(request, 'infileaf.html')
+
+def farudatalogger(request):
+    return render(request, 'farudatalogger.html')
+
+def infisoil(request):
+    return render(request, 'infisoil.html')
+
+def manu3d(request):
+    return render(request, 'manu3d.html')
+
+def earthsense(request):
+    return render(request, 'earthsense.html')
+
 
 def contact(request):
     if request.method == 'POST':
@@ -88,7 +106,7 @@ def contact(request):
 
         if ((ContactUs.objects.filter(email=email).exists())and(ContactUs.objects.filter(subject=subject).exists())and(ContactUs.objects.filter(message=message).exists()) ) :
             print('already registered')
-            messages.info(request, 'Your Query was already taken!😅')
+            messages.info(request, 'Your Query was already taken! 😅')
             return render(request, 'contact.html', {'error': 'error'})
         else:
             print("Entry done Succesfully!")
@@ -118,12 +136,12 @@ def createnewsletter(request):
         email_news = request.POST['email_news']
         if NewsLetter.objects.filter(email_news=email_news).exists():
             print('already registered')
-            messages.info(request, 'Already registered on this Email!😅')
+            messages.info(request, 'Already registered on this Email! 😅')
             return render(request, 'index.html', {'error': 'error'})
         else:
             newsletter = NewsLetter.objects.create(email_news=email_news)
             newsletter.save()
-            messages.info(request, 'Subscribed Successfully!😀')
+            messages.info(request, 'Subscribed Successfully! 😀')
             return render(request, 'index.html', {'success': 'success'})
     else:
         print("Not Updated database")
