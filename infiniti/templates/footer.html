@@ -1,21 +1,20 @@
 <!-- Footer Start -->
 {% load static %}
 <footer id="footer" class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 col-sm-12 footer-widget">
-        <h3 class="widget-title">Latest Tech</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-12 footer-widget">
+                <h3 class="widget-title">Latest Tech</h3>
 
-        {% for everynews in LatestTechNews%}
-        <div class="latest-post-items media">
-          <div class="latest-post-content media-body">
-            <h4>
-              <a href="{{everynews.news_link}}">{{everynews.news}}</a>
-            </h4>
-            <p class=" post-meta">
-              <span class="author">Posted by {{everynews.news_autor}}</span>
-              <span class="date"
-                ><i class="icon icon-calendar"></i>
+                {% for everynews in LatestTechNews%}
+                <div class="latest-post-items media">
+                    <div class="latest-post-content media-body">
+                        <h4>
+                            <a href="{{everynews.news_link}}">{{everynews.news}}</a>
+                        </h4>
+                        <p class=" post-meta">
+                            <span class="author">Posted by {{everynews.news_autor}}</span>
+                            <span class="date"><i class="icon icon-calendar"></i>
                 {{everynews.news_date}}</span
               >
             </p>
@@ -67,45 +66,29 @@
                 <i class="fa fa-envelope-o"> </i>
               </button>
             </span>
-          </div>
-        </form>
+                    </div>
+                    </form>
 
-        <div id="social" class="row mt-5 ml-1">
-          <a
-            class="fb-ic"
-            target="_blank"
-            href="https://www.facebook.com/infinitisystemspune/"
-          >
-            <i class="fa fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x">
+                    <div id="social" class="row mt-5 ml-1">
+                        <a class="fb-ic" target="_blank" href="https://www.facebook.com/infinitisystemspune/">
+                            <i class="fa fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x">
             </i>
-          </a>
-          <a
-            class="tw-ic"
-            target="_blank"
-            href="https://twitter.com/SystemsInfiniti"
-          >
-            <i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <a
-            class="li-ic"
-            target="_blank"
-            href="https://in.linkedin.com/in/infiniti-systems-b4335b188"
-          >
-            <i class="fa fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <a
-            class="ins-ic"
-            target="_blank"
-            href="https://www.instagram.com/infiniti_systems/?hl=en"
-          >
-            <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
+                        </a>
+                        <a class="tw-ic" target="_blank" href="https://twitter.com/SystemsInfiniti">
+                            <i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <a class="li-ic" target="_blank" href="https://in.linkedin.com/in/infiniti-systems-b4335b188">
+                            <i class="fa fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <a class="ins-ic" target="_blank" href="https://www.instagram.com/infiniti_systems/?hl=en">
+                            <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                    </div>
+                </div>
+                <!--/ end about us -->
+            </div>
+            <!-- Row end -->
         </div>
-      </div>
-      <!--/ end about us -->
-    </div>
-    <!-- Row end -->
-  </div>
-  <!-- Container end -->
+        <!-- Container end -->
 </footer>
 <!-- Footer end -->
