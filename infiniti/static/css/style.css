@@ -3429,11 +3429,23 @@ a.close-styler {
     height: auto;
   }
 
-  .tagsSidebar{
+  .tagsSidebar {
     display: none;
   }
 }
 
+#newsletter::placeholder {
+  color: red;
+}
+
+#social a {
+  color: #fff;
+  font-size: 20px;
+}
+
+#social a:hover {
+  color: red;
+}
 /* Custom, iPhone Retina */
 
 /*# sourceMappingURL=maps/style.css.map */
