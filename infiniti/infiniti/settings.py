@@ -123,19 +123,11 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_USE_TLS = True
-# EMAIL_PORT = 587
-# EMAIL_HOST_USER = 'infinitipcbs@gmail.com'
-# EMAIL_HOST_PASSWORD = 'InfinitiSystems@AAN'
-# DEFAULT_FROM_EMAIL = 'Infiniti Systems'
-
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtpout.secureserver.net'
+EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
-EMAIL_PORT = 80
-EMAIL_HOST_USER = 'info@infinitisystems.co.in'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'infinitipcbs@gmail.com'
 EMAIL_HOST_PASSWORD = 'InfinitiSystems@AAN'
 DEFAULT_FROM_EMAIL = 'info@infinitisystems.co.in'
 
