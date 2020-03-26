@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 <html lang="zxx">
 
-</html>
-
 <head>
     <meta charset="utf-8">
     <title>Home | Infiniti Systems - The Electronics Company</title>
-    <meta name="keywords" content="infiniti, infiniti pcbs, infiniti systems, electronics, electronics company, product company, product design, industry 4.0, hardware design, embedded software design, 3d design and manufacturing, Infi Iot cloud platform, industry consultancy, what is iot, consultancy, web services, machine learning, 3d printing, printers, manufacturing, future prediction, prediction, iot, internet of things, smart things, iot devices, cloud, design, elctronics hardware, electronics company">
-    <meta name="description" content="Infiniti Systems is Leading Pioneer in domains of Products & Design, Industry 4.0
+    <meta name="keywords"
+        content="infiniti, infiniti pcbs, infiniti systems, electronics, electronics company, product company, product design, industry 4.0, hardware design, embedded software design, 3d design and manufacturing, Infi Iot cloud platform, industry consultancy, what is iot, consultancy, web services, machine learning, 3d printing, printers, manufacturing, future prediction, prediction, iot, internet of things, smart things, iot devices, cloud, design, elctronics hardware, electronics company">
+    <meta name="description"
+        content="Infiniti Systems is Leading Pioneer in domains of Products & Design, Industry 4.0
     compliant Products, Industry Consultancy and Web Services. We Set Clear Deliverables, Set Realistic Expectations and are Transparent throughout the process.">
 
 
@@ -17,53 +17,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="theme-color" content="#000000">
 
-    <!-- ** Plugins Needed for the Project ** -->
-    <!-- loader -->
-    <!--for loader-->
-
     <style type="text/css">
         .mobileHide {
             display: inline;
+            width: 100vw;
+            height: 100vh;
         }
-        /* Smartphone Portrait and Landscape */
-        
-        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+
+        .loader {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background-color: #ffffff;
+        }
+
+        .loader img {
+            margin-top: 28vh;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+       /*  Uncomment this code to hide loader on mobile */
+        /* @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
             .mobileHide {
                 display: none;
             }
-        }
+        } */
+
     </style>
-
-    <div class="mobileHide">
-        <style>
-            .loader {
-                position: fixed;
-                left: 0px;
-                top: 0px;
-                width: 100%;
-                height: 100%;
-                z-index: 9999;
-                background-color: #ffffff;
-            }
-            
-            .loader img {
-                position: relative;
-                left: 40%;
-                top: 40%;
-            }
-        </style>
-
-        <div class="loader"><img src="{% static 'gifs/loader.gif' %}"></div>
-
-        <script>
-            window.onload = function() {
-                //display loader on page load 
-                $('.loader').fadeOut();
-            }
-        </script>
-    </div>
-
-
+    <script>
+        window.onload = function () {
+            //display loader on page load 
+            $('.loader').fadeOut();
+        }
+    </script>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css' %}">
@@ -81,7 +72,8 @@
     <!-- Flexslider -->
     <link rel="stylesheet" href="{% static 'plugins/cd-hero/cd-hero.css' %}">
     <!-- Style Swicther -->
-    <link id="style-switch" href="{% static 'css/presets/preset3.css' %}" media="screen" rel="stylesheet" type="text/css">
+    <link id="style-switch" href="{% static 'css/presets/preset3.css' %}" media="screen" rel="stylesheet"
+        type="text/css">
     <!-- SweetAlert2 -->
     <link rel="stylesheet" href="{% static 'plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css' %}">
 
@@ -89,7 +81,7 @@
     <script src="{% static 'plugins/jquery-3.3.1.js' %}">
     </script>
     <script>
-        $(function() {
+        $(function () {
             $("#header").load("headerpage");
             $("#footer").load("footerpage");
             $("#counter").load("counterpage");
@@ -108,6 +100,9 @@
 </head>
 
 <body>
+    <div class="mobileHide">
+        <div class="loader"><img src="{% static 'gifs/loader.gif' %}"></div>
+    </div>
 
     <div id="overlay"></div>
     <div class="body-inner" id="content">
@@ -119,7 +114,9 @@
                 <ul class="cd-hero-slider" style="height: 100vh;">
                     <li class="selected">
                         <div class="overlay2" style="height: 100vh;">
-                            <img class="img-fluid" style="width: 100%; height: 100%; background-size: cover;" src="{% static 'images/slider/bg1.jpg' %}" alt="a image showing high buildings - a IT park">
+                            <img class="img-fluid" style="width: 100%; height: 100%; background-size: cover;"
+                                src="{% static 'images/slider/bg1.webp' %}"
+                                alt="a image showing high buildings - a IT park">
                         </div>
                         <div class="cd-full-width">
                             <h2>From Imagination To Innovation!</h2>
@@ -129,7 +126,9 @@
                     </li>
                     <li>
                         <div class="overlay2" style="height: 100vh;">
-                            <img class="img-fluid" style="width: 100%; height: 100%; background-size: cover;" src="{% static 'images/slider/bg2.jpg' %}" alt="Industry consultancy for a client - discussing on stats">
+                            <img class="img-fluid" style="width: 100%; height: 100%; background-size: cover;"
+                                src="{% static 'images/slider/bg2.webp' %}"
+                                alt="Industry consultancy for a client - discussing on stats">
                         </div>
                         <div class="cd-half-width cd-img-container img-right">
                             <!-- <img src="{% static 'images/slider/bg-thumb2.png' %}" alt=""> -->
@@ -148,7 +147,8 @@
                     </li>
                     <li>
                         <div class="overlay2" style="height: 100vh;">
-                            <img class="img-fluid" style="width: 100%; height: 100%; background-size: cover;" src="{% static 'images/slider/bg3.jpg' %}" alt="a image of piggy bank">
+                            <img class="img-fluid" style="width: 100%; height: 100%; background-size: cover;"
+                                src="{% static 'images/slider/bg3.webp' %}" alt="a image of piggy bank">
                         </div>
                         <!-- <div class="cd-half-width cd-img-container img-right">
                     <img src="{% static 'images/slider/bg-thumb2.png' %}" alt="">
@@ -156,7 +156,8 @@
                         <!-- .cd-half-width.cd-img-container -->
                         <div class="cd-half-width">
                             <h2>Got tight technical and budget constraints for your Product's Success?</h2>
-                            <p>We work tirelessly to deliver engaging products that stimulate the user and disrupt markets.
+                            <p>We work tirelessly to deliver engaging products that stimulate the user and disrupt
+                                markets.
                             </p>
                             <a href="products-and-design" class="cd-btn btn secondary btn-primary solid">Learn More</a>
                         </div>
@@ -209,7 +210,8 @@
                 <div class="row">
                     <div class="col-md-12 heading">
                         <span class="title-icon float-left"><i class="fa fa-cogs"></i></span>
-                        <h2 class="title">Service We Provide <span class="title-desc">A Quality Experience Team with 8 years experience</span>
+                        <h2 class="title">Service We Provide <span class="title-desc">A Quality Experience Team with 8
+                                years experience</span>
                         </h2>
                     </div>
                 </div>
@@ -220,7 +222,8 @@
                         <div class="service-content text-center">
                             <span class="service-icon icon-pentagon"><i class="fa fa-gears"></i></span>
                             <h3>Products and Design</h3>
-                            <p style="height: 120px;">Our Product Design and Development Service will help take your business from where it is today to where it needs to be in the future.</p>
+                            <p style="height: 120px;">Our Product Design and Development Service will help take your
+                                business from where it is today to where it needs to be in the future.</p>
                             <a href="products-and-design" class="cd-btn btn secondary btn-primary">Learn More</a>
                         </div>
                     </div>
@@ -230,7 +233,8 @@
                         <div class="service-content text-center">
                             <span class="service-icon icon-pentagon"><i class="fa fa-handshake-o"></i></span>
                             <h3>Industry Consultancy</h3>
-                            <p style="height: 120px;">Improve your enterprise asset management and performance with technologies, such as Automation, Cloud, Analytics, Mobility and Security.</p>
+                            <p style="height: 120px;">Improve your enterprise asset management and performance with
+                                technologies, such as Automation, Cloud, Analytics, Mobility and Security.</p>
                             <a href="industry-consultancy" class="cd-btn btn secondary btn-primary">Learn More</a>
                         </div>
                     </div>
@@ -240,7 +244,9 @@
                         <div class="service-content text-center">
                             <span class="service-icon icon-pentagon"><i class="fa fa-jsfiddle"></i></span>
                             <h3>Infi IoT Platform</h3>
-                            <p style="height: 120px;">Quick and Solid solution for your IoT Application: Data Acquisition, Storage, Processing, Powerful Advanced Analytics, Visualization, and Enterprise Application Integration.
+                            <p style="height: 120px;">Quick and Solid solution for your IoT Application: Data
+                                Acquisition, Storage, Processing, Powerful Advanced Analytics, Visualization, and
+                                Enterprise Application Integration.
                             </p>
                             <a href="infi-iot-platform" class="cd-btn btn secondary btn-primary">Learn More</a>
                         </div>
@@ -251,7 +257,8 @@
                         <div class="service-content text-center">
                             <span class="service-icon icon-pentagon"><i class="fa fa-lightbulb-o"></i></span>
                             <h3>Web Development Services</h3>
-                            <p style="height: 120px;">We design beautiful modern engaging websites using latest responsive technologies.
+                            <p style="height: 120px;">We design beautiful modern engaging websites using latest
+                                responsive technologies.
                             </p>
                             <a href="web-development-services" class="cd-btn btn secondary btn-primary">Learn More</a>
                         </div>
@@ -301,12 +308,14 @@
                     <div class="col-sm-3 Web isotope-item">
                         <div class="grid">
                             <figure class="m-0 effect-oscar">
-                                <img src="{% static 'images/portfolio/infi-iot0.jpg' %}" alt="icon of infi iot cloud - a product of infiniti systems">
+                                <img src="{% static 'images/portfolio/infi-iot0.jpg' %}"
+                                    alt="icon of infi iot cloud - a product of infiniti systems">
                                 <figcaption>
                                     <h3>InfiIoT - Futuristic Iot Cloud Platform</h3>
-                                    <a class="link icon-pentagon" href="InfiIoT"><i
-                                    class="fa fa-link"></i></a>
-                                    <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/infi-iot1.jpg' %}"><i class="fa fa-search"></i></a>
+                                    <a class="link icon-pentagon" href="InfiIoT"><i class="fa fa-link"></i></a>
+                                    <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                        href="{% static 'images/portfolio/infi-iot1.jpg' %}"><i
+                                            class="fa fa-search"></i></a>
                                 </figcaption>
                             </figure>
                         </div>
@@ -316,12 +325,14 @@
                     <div class="col-sm-3 Power isotope-item">
                         <div class="grid">
                             <figure class="m-0 effect-oscar">
-                                <img src="{% static 'images/portfolio/infidrive-0.jpg' %}" alt="infi drive - smart motor driver, a product of infiniti systems">
+                                <img src="{% static 'images/portfolio/infidrive-0.jpg' %}"
+                                    alt="infi drive - smart motor driver, a product of infiniti systems">
                                 <figcaption>
                                     <h3>InfiDrive - Smart Motor Driver</h3>
-                                    <a class="link icon-pentagon" href="infidrive"><i
-                                    class="fa fa-link"></i></a>
-                                    <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/infidrive-1.jpg' %}"><i class="fa fa-search"></i></a>
+                                    <a class="link icon-pentagon" href="infidrive"><i class="fa fa-link"></i></a>
+                                    <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                        href="{% static 'images/portfolio/infidrive-1.jpg' %}"><i
+                                            class="fa fa-search"></i></a>
                                 </figcaption>
                             </figure>
                         </div>
@@ -331,12 +342,14 @@
                     <div class="col-sm-3 Sensors isotope-item">
                         <div class="grid">
                             <figure class="m-0 effect-oscar">
-                                <img src="{% static 'images/portfolio/infisense-0.jpg' %}" alt="infi sense standing in a africulture field - internet of things, a product of infiniti systems">
+                                <img src="{% static 'images/portfolio/infisense-0.jpg' %}"
+                                    alt="infi sense standing in a africulture field - internet of things, a product of infiniti systems">
                                 <figcaption>
                                     <h3>Infi Sense - IoT the Smart way</h3>
-                                    <a class="link icon-pentagon" href="infisense"><i
-                                    class="fa fa-link"></i></a>
-                                    <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/infisense-1.jpg' %}"><i class="fa fa-search"></i></a>
+                                    <a class="link icon-pentagon" href="infisense"><i class="fa fa-link"></i></a>
+                                    <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                        href="{% static 'images/portfolio/infisense-1.jpg' %}"><i
+                                            class="fa fa-search"></i></a>
                                 </figcaption>
                             </figure>
                         </div>
@@ -347,12 +360,14 @@
                     <div class="col-sm-3 Sensors isotope-item">
                         <div class="grid">
                             <figure class="m-0 effect-oscar">
-                                <img src="{% static 'images/portfolio/infimesh-0.jpg' %}" alt="infi mesh hardware showing a iot node sending data, a product of infiniti systems">
+                                <img src="{% static 'images/portfolio/infimesh-0.jpg' %}"
+                                    alt="infi mesh hardware showing a iot node sending data, a product of infiniti systems">
                                 <figcaption>
                                     <h3>Infi Mesh - Connect to future</h3>
-                                    <a class="link icon-pentagon" href="infimesh"><i
-                                    class="fa fa-link"></i></a>
-                                    <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/infimesh-1.jpg' %}"><i class="fa fa-search"></i></a>
+                                    <a class="link icon-pentagon" href="infimesh"><i class="fa fa-link"></i></a>
+                                    <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                        href="{% static 'images/portfolio/infimesh-1.jpg' %}"><i
+                                            class="fa fa-search"></i></a>
                                 </figcaption>
                             </figure>
                         </div>
@@ -363,12 +378,14 @@
                     <div class="col-sm-3 3D isotope-item">
                         <div class="grid">
                             <figure class="m-0 effect-oscar">
-                                <img src="{% static 'images/portfolio/printer-0.jpg' %}" alt="a palm model printed using industry grade 3d printers of infiniti systems">
+                                <img src="{% static 'images/portfolio/printer-0.jpg' %}"
+                                    alt="a palm model printed using industry grade 3d printers of infiniti systems">
                                 <figcaption>
                                     <h3>Industry Grade Desktop Printer</h3>
-                                    <a class="link icon-pentagon" href="printer"><i
-                                    class="fa fa-link"></i></a>
-                                    <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/printer-1.jpg' %}"><i class="fa fa-search"></i></a>
+                                    <a class="link icon-pentagon" href="printer"><i class="fa fa-link"></i></a>
+                                    <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                        href="{% static 'images/portfolio/printer-1.jpg' %}"><i
+                                            class="fa fa-search"></i></a>
                                 </figcaption>
                             </figure>
                         </div>
@@ -378,12 +395,14 @@
                     <div class="col-sm-3 Power isotope-item">
                         <div class="grid">
                             <figure class="m-0 effect-oscar">
-                                <img src="{% static 'images/portfolio/poweranalysis-0.jpg' %}" alt="voltage accuracy graph of remote industry power analysis system, a product of infi systems">
+                                <img src="{% static 'images/portfolio/poweranalysis-0.jpg' %}"
+                                    alt="voltage accuracy graph of remote industry power analysis system, a product of infi systems">
                                 <figcaption>
                                     <h3>Remote Industry Power Analysis System</h3>
-                                    <a class="link icon-pentagon" href="poweranalysis"><i
-                                    class="fa fa-link"></i></a>
-                                    <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/poweranalysis-1.jpg' %}"><i class="fa fa-search"></i></a>
+                                    <a class="link icon-pentagon" href="poweranalysis"><i class="fa fa-link"></i></a>
+                                    <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                        href="{% static 'images/portfolio/poweranalysis-1.jpg' %}"><i
+                                            class="fa fa-search"></i></a>
                                 </figcaption>
                             </figure>
                         </div>
@@ -393,12 +412,14 @@
                     <div class="col-sm-3 Sensors isotope-item">
                         <div class="grid">
                             <figure class="m-0 effect-oscar">
-                                <img src="{% static 'images/portfolio/infiweather-0.jpg' %}" alt="image of clouds showing the ability of infi weather to sense the weather parameters">
+                                <img src="{% static 'images/portfolio/infiweather-0.jpg' %}"
+                                    alt="image of clouds showing the ability of infi weather to sense the weather parameters">
                                 <figcaption>
                                     <h3>Infi Weather - Cutting Edge Weather Station with AI forcast</h3>
-                                    <a class="link icon-pentagon" href="infiweather"><i
-                                    class="fa fa-link"></i></a>
-                                    <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/infiweather-1.jpg' %}"><i class="fa fa-search"></i></a>
+                                    <a class="link icon-pentagon" href="infiweather"><i class="fa fa-link"></i></a>
+                                    <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                        href="{% static 'images/portfolio/infiweather-1.jpg' %}"><i
+                                            class="fa fa-search"></i></a>
                                 </figcaption>
                             </figure>
                         </div>
@@ -408,12 +429,14 @@
                     <div class="col-sm-3 Sensors isotope-item">
                         <div class="grid">
                             <figure class="m-0 effect-oscar">
-                                <img src="{% static 'images/portfolio/infigauge-0.jpg' %}" alt="traditional technique of measuring rain , a depiction of infi gauge which is used to measure rain digitaly">
+                                <img src="{% static 'images/portfolio/infigauge-0.jpg' %}"
+                                    alt="traditional technique of measuring rain , a depiction of infi gauge which is used to measure rain digitaly">
                                 <figcaption>
                                     <h3>Infi Gauge - A more accurate measuring gauge</h3>
-                                    <a class="link icon-pentagon" href="infigauge"><i
-                                    class="fa fa-link"></i></a>
-                                    <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/infiweather-1.jpg' %}"><i class="fa fa-search"></i></a>
+                                    <a class="link icon-pentagon" href="infigauge"><i class="fa fa-link"></i></a>
+                                    <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                        href="{% static 'images/portfolio/infiweather-1.jpg' %}"><i
+                                            class="fa fa-search"></i></a>
                                 </figcaption>
                             </figure>
                         </div>
@@ -423,12 +446,14 @@
                     <div class="col-sm-3 Sensors isotope-item">
                         <div class="grid">
                             <figure class="m-0 effect-oscar">
-                                <img src="{% static 'images/portfolio/infileaf-0.jpg' %}" alt="leaf wetness measurement sensor infi leaf by infiniti systems">
+                                <img src="{% static 'images/portfolio/infileaf-0.jpg' %}"
+                                    alt="leaf wetness measurement sensor infi leaf by infiniti systems">
                                 <figcaption>
                                     <h3>Infi Leaf - The leaf Wetness Sensor</h3>
-                                    <a class="link icon-pentagon" href="infileaf"><i
-                                    class="fa fa-link"></i></a>
-                                    <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/infileaf-1.jpg' %}"><i class="fa fa-search"></i></a>
+                                    <a class="link icon-pentagon" href="infileaf"><i class="fa fa-link"></i></a>
+                                    <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                        href="{% static 'images/portfolio/infileaf-1.jpg' %}"><i
+                                            class="fa fa-search"></i></a>
                                 </figcaption>
                             </figure>
                         </div>
@@ -438,12 +463,14 @@
                     <div class="col-sm-3 Power isotope-item">
                         <div class="grid">
                             <figure class="m-0 effect-oscar">
-                                <img src="{% static 'images/portfolio/datalogger-0.jpg' %}" alt="faru data logger hardware infiniti systems">
+                                <img src="{% static 'images/portfolio/datalogger-0.jpg' %}"
+                                    alt="faru data logger hardware infiniti systems">
                                 <figcaption>
                                     <h3>FARU - Field Analog Recorder Unit</h3>
-                                    <a class="link icon-pentagon" href="farudatalogger"><i
-                                    class="fa fa-link"></i></a>
-                                    <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/datalogger-1.jpg' %}"><i class="fa fa-search"></i></a>
+                                    <a class="link icon-pentagon" href="farudatalogger"><i class="fa fa-link"></i></a>
+                                    <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                        href="{% static 'images/portfolio/datalogger-1.jpg' %}"><i
+                                            class="fa fa-search"></i></a>
                                 </figcaption>
                             </figure>
                         </div>
@@ -453,12 +480,14 @@
                     <div class="col-sm-3 Sensors isotope-item">
                         <div class="grid">
                             <figure class="m-0 effect-oscar">
-                                <img src="{% static 'images/portfolio/infisoil-0.jpg' %}" alt="black soil with some grass a target field for infi soil/ infi ece sensor">
+                                <img src="{% static 'images/portfolio/infisoil-0.jpg' %}"
+                                    alt="black soil with some grass a target field for infi soil/ infi ece sensor">
                                 <figcaption>
                                     <h3>Infi-Soil/ Infi-ECE</h3>
-                                    <a class="link icon-pentagon" href="infisoil"><i
-                                    class="fa fa-link"></i></a>
-                                    <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/infisoil-1.jpg' %}"><i class="fa fa-search"></i></a>
+                                    <a class="link icon-pentagon" href="infisoil"><i class="fa fa-link"></i></a>
+                                    <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                        href="{% static 'images/portfolio/infisoil-1.jpg' %}"><i
+                                            class="fa fa-search"></i></a>
                                 </figcaption>
                             </figure>
                         </div>
@@ -468,12 +497,14 @@
                     <div class="col-sm-3 3D isotope-item">
                         <div class="grid">
                             <figure class="m-0 effect-oscar">
-                                <img src="{% static 'images/portfolio/3dmanu-0.jpg' %}" alt="a movable bat model printed by infiniti systems 3d manufacturing service">
+                                <img src="{% static 'images/portfolio/3dmanu-0.jpg' %}"
+                                    alt="a movable bat model printed by infiniti systems 3d manufacturing service">
                                 <figcaption>
                                     <h3>3D Printing Services</h3>
-                                    <a class="link icon-pentagon" href="3dmanu"><i
-                                    class="fa fa-link"></i></a>
-                                    <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/3dmanu-1.jpg' %}"><i class="fa fa-search"></i></a>
+                                    <a class="link icon-pentagon" href="3dmanu"><i class="fa fa-link"></i></a>
+                                    <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                        href="{% static 'images/portfolio/3dmanu-1.jpg' %}"><i
+                                            class="fa fa-search"></i></a>
                                 </figcaption>
                             </figure>
                         </div>
@@ -498,12 +529,14 @@
                     <div class="col-sm-3 Consult isotope-item">
                         <div class="grid">
                             <figure class="m-0 effect-oscar">
-                                <img src="{% static 'images/portfolio/earthsense-0.jpg' %}" alt="earthsense - consultancy product of infiniti systems for ni logic pvt ltd">
+                                <img src="{% static 'images/portfolio/earthsense-0.jpg' %}"
+                                    alt="earthsense - consultancy product of infiniti systems for ni logic pvt ltd">
                                 <figcaption>
                                     <h3>Earth Sense - Consultancy Project for Ni-Logic Ltd.</h3>
-                                    <a class="link icon-pentagon" href="earthsense"><i
-                                    class="fa fa-link"></i></a>
-                                    <a class="view icon-pentagon" data-rel="prettyPhoto" href="{% static 'images/portfolio/earthsense-1-bg3.jpg' %}"><i class="fa fa-search"></i></a>
+                                    <a class="link icon-pentagon" href="earthsense"><i class="fa fa-link"></i></a>
+                                    <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                        href="{% static 'images/portfolio/earthsense-1-bg3.jpg' %}"><i
+                                            class="fa fa-search"></i></a>
                                 </figcaption>
                             </figure>
                         </div>
@@ -569,7 +602,8 @@
                         <span class="feature-icon float-left"><i class="fa fa-balance-scale"></i></span>
                         <div class="feature-content">
                             <h3>Value for Money</h3>
-                            <p>We belive our success lies in Clients Satisfaction, our team is always on front foot while serving Clients.</p>
+                            <p>We belive our success lies in Clients Satisfaction, our team is always on front foot
+                                while serving Clients.</p>
                         </div>
                     </div>
                     <!--/ End 2nd featurebox -->
@@ -593,13 +627,16 @@
         <section id="image-block" class="image-block p-0">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-6 ts-padding" alt="a table with choice of coffee from black coffeeto milky coffee" style="height:650px;background:url({% static 'images/whychoose.jpg' %}) 50% 50% / cover no-repeat;">
+                    <div class="col-md-6 ts-padding"
+                        alt="a table with choice of coffee from black coffeeto milky coffee"
+                        style="height:650px;background:url({% static 'images/whychoose.jpg' %}) 50% 50% / cover no-repeat;">
                     </div>
                     <div class="col-md-6 ts-padding img-block-right">
                         <div class="img-block-head text-center">
                             <h2>Know More About Infiniti Systems</h2>
                             <h3>Why Choose Us</h3>
-                            <p>Here are the reasons you can depend on Infiniti System to keep you and your business up and running:
+                            <p>Here are the reasons you can depend on Infiniti System to keep you and your business up
+                                and running:
                             </p>
                         </div>
 
@@ -620,7 +657,8 @@
                             <span class="feature-icon float-left"><i class="fa fa-mortar-board"></i></span>
                             <div class="feature-content">
                                 <h3>Our Skill-Set</h3>
-                                <p>We are product design experts; we are industry experts; we are database-design experts; we are IIOT experts</p>
+                                <p>We are product design experts; we are industry experts; we are database-design
+                                    experts; we are IIOT experts</p>
                             </div>
                         </div>
                         <!--/ End 1st block -->
@@ -648,7 +686,8 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <h2>Our Clients hire us, rather than somebody else, beacause </h2>
-                        <h3>We Set Clear Deliverables, Set Realistic Expectations and are Transparent throughout the process.
+                        <h3>We Set Clear Deliverables, Set Realistic Expectations and are Transparent throughout the
+                            process.
                         </h3>
                         <p>
                             <a href="contact" class="btn btn-primary solid">Get In Touch</a>
@@ -711,22 +750,22 @@
             <div>
                 {% if messages %} {% for message in messages %} {% if error %}
                 <label class="swalDefaultError" hidden>
-                <script>
-                    var title = `{{message}}`;
-                    console.log('test test')
-                </script>
-            </label> {% elif success %}
+                    <script>
+                        var title = `{{message}}`;
+                        console.log('test test')
+                    </script>
+                </label> {% elif success %}
                 <label class="swalDefaultSuccess" hidden>
-                <script>
-                    var title = `{{message}}`;
-                    console.log('test test')
-                </script>
-            </label> {% endif %} {% endfor %} {% endif %}
+                    <script>
+                        var title = `{{message}}`;
+                        console.log('test test')
+                    </script>
+                </label> {% endif %} {% endfor %} {% endif %}
             </div>
             <!-- Main row end -->
         </div>
         <!--/ Container end -->
-        </section>
+        <!--  </section> -->
         <!--/ Clients end -->
 
         <div id="footer"></div>
@@ -758,18 +797,15 @@
     <script type="text/javascript" src="{% static 'plugins/jquery.counterup.min.js' %}"></script>
     <!-- Waypoints -->
     <script type="text/javascript" src="{% static 'plugins/waypoints.min.js' %}"></script>
-
     <!-- SweetAlert2 -->
     <script src="{% static 'plugins/sweetalert2/sweetalert2.min.js' %}"></script>
-
-
     <!-- Main Script -->
     <script src="{% static 'js/script.js' %}"></script>
 
 
 
     <script>
-        $(document).click(function(event) {
+        $(document).click(function (event) {
             var clickover = $(event.target);
             var _opened = $(".navbar-collapse").hasClass("show");
             if (_opened === true && !clickover.hasClass("navbar-toggler")) {
@@ -779,7 +815,7 @@
     </script>
 
     <script type="text/javascript">
-        $(function() {
+        $(function () {
             const Toast = Swal.mixin({
                 toast: false,
                 // position: 'top-end',
@@ -787,32 +823,32 @@
                 timer: 5000
             });
 
-            $('.swalDefaultSuccess').show(function() {
+            $('.swalDefaultSuccess').show(function () {
                 Toast.fire({
                     type: 'success',
                     title: title
                 })
             });
-            $('.swalDefaultInfo').show(function() {
+            $('.swalDefaultInfo').show(function () {
                 Toast.fire({
                     type: 'info',
                     title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
                 })
             });
-            $('.swalDefaultError').show(function() {
+            $('.swalDefaultError').show(function () {
                 console.log('ERROR')
                 Toast.fire({
                     type: 'error',
                     title: title
                 })
             });
-            $('.swalDefaultWarning').show(function() {
+            $('.swalDefaultWarning').show(function () {
                 Toast.fire({
                     type: 'warning',
                     title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
                 })
             });
-            $('.swalDefaultQuestion').show(function() {
+            $('.swalDefaultQuestion').show(function () {
                 Toast.fire({
                     type: 'question',
                     title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
@@ -824,8 +860,5 @@
     <!--loader-->
 
 </body>
-
-
-</html>
 
 </html>
