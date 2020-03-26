@@ -115,7 +115,7 @@ def contact(request):
             print("Entry done Succesfully!")
             contact_us = ContactUs.objects.create(name=name, email=email, subject=subject, message=message)
             contact_us.save()
-             # mail part start
+             #to self  mail part start
             email_subject = 'Contact Us'
             message = render_to_string('contactus_message.html', {
                 'name': name,
@@ -123,9 +123,18 @@ def contact(request):
                 'subject': subject,
                 'message': message,
             })
+            reply_to_email=email
             to_email = 'info@infinitisystems.co.in'
             email = EmailMessage(email_subject, message, to=[to_email])
             email.send()
+            # mail part end
+            # to client mail part start
+            email_subject2 = 'We got it — RE: '+subject
+            reply = '\n\n'+'Hi '+name+','+'\n\n'+'Thanks so much for reaching out! This auto-reply is just to let you know…' +'\n\n'+ 'We received your email and will get back to you with a (human) response as soon as possible. During 9:00hrs to 18:00hrs that’s usually within a couple of hours. Evenings and weekends may take us a little bit longer.' +'\n\n'+ 'If you have any additional information that you think will help us to assist you, please feel free to reply to this email.' +'\n\n'+ 'We look forward to chatting soon!' +'\n\n'+ 'Cheers,' +'\n'+'Infiniti Systems'
+            print(reply)
+            print(reply_to_email)
+            email2 = EmailMessage(email_subject2, reply, to=[reply_to_email])
+            email2.send()
             # mail part end
             print('query added')
             messages.info(request, 'Message sent Successfully! We will revert back you soon. 😊')

@@ -14,6 +14,42 @@
     <meta name="theme-color" content="#000000">
 
     <!-- ** Plugins Needed for the Project ** -->
+    <style type="text/css">
+        .mobileHide {
+            display: inline;
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        .loader {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background-color: #ffffff;
+        }
+        
+        .loader img {
+            margin-top: 28vh;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /*  Uncomment this code to hide loader on mobile */
+        /*@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+            .mobileHide {
+                display: none;
+            }
+        }*/
+    </style>
+    <script>
+        window.onload = function() {
+            //display loader on page load 
+            $('.loader').fadeOut();
+        }
+    </script>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css' %}" />
     <!-- FontAwesome -->
@@ -52,6 +88,10 @@
 </head>
 
 <body>
+    <div class="mobileHide">
+        <div class="loader"><img src="{% static 'gifs/loader.gif' %}"></div>
+    </div>
+
     <div class="body-inner">
         <!-- Header start -->
         <div id="header"></div>
