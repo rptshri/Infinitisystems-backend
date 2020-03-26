@@ -3506,6 +3506,9 @@ a.close-styler {
     .tagsSidebar {
         display: none;
     }
+    .dispmob {
+        display: true;
+    }
 }
 
 #newsletter::placeholder {
