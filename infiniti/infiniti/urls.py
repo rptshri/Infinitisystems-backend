@@ -15,8 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls import handler404
 
 urlpatterns = [
     path('', include('contactus.urls')),
-    path('admin/', admin.site.urls)
+    path('SP4CG9K0786/', admin.site.urls)
 ]
+
+handler404 = 'contactus.views.error_404_view'

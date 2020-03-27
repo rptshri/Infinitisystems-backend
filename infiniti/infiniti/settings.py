@@ -24,7 +24,7 @@ SECRET_KEY = 'xdlcs_#y5s#xg_sbwcw$8mx9366vk5g&q2hiv9zy9a+0!x84%g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.105']
+ALLOWED_HOSTS = ['192.168.1.105','127.0.0.1']
 
 # Application definition
 
@@ -76,8 +76,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'Infi Website',
         'USER': 'postgres',
-        'PASSWORD': 'Anil@1998',
-        # 'PASSWORD': 'admin',
+        # 'PASSWORD': 'Anil@1998',
+        'PASSWORD': 'admin',
         'HOST': 'localhost'
     }
 }

@@ -100,6 +100,8 @@ def manu3d(request):
 def earthsense(request):
     return render(request, 'earthsense.html')
 
+
+
 def contact(request):
     if request.method == 'POST':
         name = request.POST['name']
@@ -130,9 +132,9 @@ def contact(request):
             # mail part end
             # to client mail part start
             email_subject2 = 'We got it — RE: '+subject
-            reply = '\n\n'+'Hi '+name+','+'\n\n'+'Thanks so much for reaching out! This auto-reply is just to let you know…' +'\n\n'+ 'We received your email and will get back to you with a (human) response as soon as possible. During 9:00hrs to 18:00hrs that’s usually within a couple of hours. Evenings and weekends may take us a little bit longer.' +'\n\n'+ 'If you have any additional information that you think will help us to assist you, please feel free to reply to this email.' +'\n\n'+ 'We look forward to chatting soon!' +'\n\n'+ 'Cheers,' +'\n'+'Infiniti Systems'
-            print(reply)
-            print(reply_to_email)
+            reply = '\n\n'+'Hi '+name+','+'\n\n'+'Thanks so much for reaching out! This auto-reply is just to let you know…' +'\n\n'+ 'We received your email and will get back to you with a (human) response as soon as possible. During 9:00hrs to 18:00hrs that’s usually within a couple of hours. Evenings and weekends may take us a little bit longer.' +'\n\n'+ 'If you have any additional information that you think will help us to assist you, please feel free to reply to this email.' +'\n\n'+ 'We look forward to chatting soon!' +'\n\n'+ 'Cheers,' +'\n'+'Infiniti Systems'+'\n'+'Pune.'
+            # print(reply)
+            # print(reply_to_email)
             email2 = EmailMessage(email_subject2, reply, to=[reply_to_email])
             email2.send()
             # mail part end
@@ -145,6 +147,7 @@ def contact(request):
 def createnewsletter(request):
     if request.method == 'POST':
         email_news = request.POST['email_news']
+        reply_to_sub=email_news
         if NewsLetter.objects.filter(email_news=email_news).exists():
             print('already registered')
             messages.info(request, 'Already registered on this Email! 😅')
@@ -152,8 +155,20 @@ def createnewsletter(request):
         else:
             newsletter = NewsLetter.objects.create(email_news=email_news)
             newsletter.save()
+             # to client mail part start
+            email_subject3 = 'Thanks for subscribing to Infiniti Systems'
+            reply_newsletter = '\n\n'+'Hello, '+'\n\n'+'Thank you for subscribing to our blog. We will be sending you content from the leading electronics industry professionals in the business.' +'\n\n'+ 'We have a combined 8 experience in the industry so you will be receiving only the best content every week.' +'\n\n'+ 'If you have any questions or comments about the content you’re receiving please email back and we will respond to your inquiry promptly.' +'\n\n'+ 'We look forward to chatting soon!' +'\n\n'+ 'Sincerely,' +'\n'+'Infiniti Systems' +'\n'+'Pune.'
+            # print(reply_newsletter)
+            # print(reply_to_sub)
+            email2 = EmailMessage(email_subject3, reply_newsletter, to=[reply_to_sub])
+            email2.send()
+            # mail part end
             messages.info(request, 'Subscribed Successfully! 😀')
             return render(request, 'index.html', {'success': 'success'})
     else:
         print("Not Updated database")
     return render(request, 'index.html')
+
+
+def error_404_view(request, exception):
+    return render(request, '404.html')
