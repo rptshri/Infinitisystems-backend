@@ -22,9 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'xdlcs_#y5s#xg_sbwcw$8mx9366vk5g&q2hiv9zy9a+0!x84%g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['192.168.1.105','127.0.0.1']
+ALLOWED_HOSTS = ['example.com']
 
 # Application definition
 
@@ -71,16 +71,17 @@ WSGI_APPLICATION = 'infiniti.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Infi Website',
-        'USER': 'postgres',
-        # 'PASSWORD': 'Anil@1998',
-        'PASSWORD': 'admin',
-        'HOST': 'localhost'
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'Infi Website',
+#         'USER': 'postgres',
+#         # 'PASSWORD': 'Anil@1998',
+#         'PASSWORD': 'admin',
+#         'HOST': 'db.example.com',
+#         'PORT':'5432',
+#     }      
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -122,14 +123,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
-
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_USE_TLS = True
-# EMAIL_PORT = 587
-# EMAIL_HOST_USER = 'infinitipcbs@gmail.com'
-# EMAIL_HOST_PASSWORD = 'InfinitiSystems@AAN'
-# DEFAULT_FROM_EMAIL = 'Infiniti Systems'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtpout.secureserver.net'
