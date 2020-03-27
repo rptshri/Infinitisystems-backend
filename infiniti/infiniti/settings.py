@@ -22,9 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'xdlcs_#y5s#xg_sbwcw$8mx9366vk5g&q2hiv9zy9a+0!x84%g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['example.com']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -78,10 +78,17 @@ WSGI_APPLICATION = 'infiniti.wsgi.application'
 #         'USER': 'postgres',
 #         # 'PASSWORD': 'Anil@1998',
 #         'PASSWORD': 'admin',
-#         'HOST': 'db.example.com',
+#         'HOST': '',
 #         'PORT':'5432',
 #     }      
 # }
+
+DATABASES = {
+    'default': {
+         'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'InfinitiSystems.db'),
+    }      
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
