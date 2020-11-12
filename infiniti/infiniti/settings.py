@@ -22,9 +22,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'xdlcs_#y5s#xg_sbwcw$8mx9366vk5g&q2hiv9zy9a+0!x84%g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+##local
 DEBUG = True
-
 ALLOWED_HOSTS = ['*']
+
+
+##hosting
+# DEBUG = False
+# ALLOWED_HOSTS = ['*']
+
 
 # Application definition
 
@@ -83,12 +89,28 @@ WSGI_APPLICATION = 'infiniti.wsgi.application'
 #     }      
 # }
 
+##local
 DATABASES = {
     'default': {
-         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'InfinitiSystems.db'),
-    }      
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'infiniti$infiniti',
+        'USER': 'infiniti',
+        'PASSWORD': 'SP4CG9K0',
+        'HOST': 'localhost',
+    }
 }
+
+##hosting
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'infiniti$infiniti',
+#         'USER': 'infiniti',
+#         'PASSWORD': 'SP4CG9K0',
+#         'HOST': 'infiniti.mysql.pythonanywhere-services.com',
+#     }
+# }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -124,18 +146,39 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-
+##local
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtpout.secureserver.net'
-EMAIL_USE_TLS = True
-EMAIL_PORT = 80
-EMAIL_HOST_USER = 'info@infinitisystems.co.in'
-EMAIL_HOST_PASSWORD = 'InfinitiSystems@AAN'
-DEFAULT_FROM_EMAIL = 'info@infinitisystems.co.in'
+##hosting
+# STATIC_URL = '/static/'
+# STATIC_ROOT = "/home/infiniti/Infinitisystems-backend/infiniti/static"
 
+##local
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtpout.secureserver.net'
+# EMAIL_USE_TLS = True
+# EMAIL_PORT = 80
+# EMAIL_HOST_USER = 'info@infinitisystems.co.in'
+# EMAIL_HOST_PASSWORD = 'InfinitiSystems@AAN'
+# DEFAULT_FROM_EMAIL = 'info@infinitisystems.co.in'
+
+##hosting
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'inficloudsystems@gmail.com'
+EMAIL_HOST_PASSWORD = 'oivvzkabxrlthjif'
+DEFAULT_FROM_EMAIL = 'InfiIoT Team'
+
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_USE_TLS = True
+# EMAIL_PORT = 587
+# EMAIL_HOST_USER = 'infinitipcbs@gmail.com'
+# EMAIL_HOST_PASSWORD = 'oonnowkzwflkazxt'
+# DEFAULT_FROM_EMAIL = 'info@infinitisystems.co.in'
