@@ -34,6 +34,7 @@ urlpatterns = [
     path('infisoil', views.infisoil, name='infisoil'),
     path('3dmanu', views.manu3d, name='3dmanu'),
     path('earthsense', views.earthsense, name='earthsense'),
+    path('infitunnel', views.infitunnel, name='infitunnel'),
     path('createnewsletter', views.createnewsletter, name='createnewsletter')
 
 ]

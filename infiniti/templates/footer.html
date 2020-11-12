@@ -5,7 +5,6 @@
         <div class="row">
             <div class="col-md-4 col-sm-12 footer-widget">
                 <h3 class="widget-title">Latest Tech</h3>
-
                 {% for everynews in LatestTechNews%}
                 <div class="latest-post-items media">
                     <div class="latest-post-content media-body">
@@ -14,81 +13,67 @@
                         </h4>
                         <p class=" post-meta">
                             <span class="author">Posted by {{everynews.news_autor}}</span>
-                            <span class="date"><i class="icon icon-calendar"></i>
-                {{everynews.news_date}}</span
-              >
-            </p>
-          </div>
-        </div>
-        {%endfor%}
-        <!-- 1st Latest Post end -->
-      </div>
-      <!--/ End Recent Posts-->
-
-      <div class="col-md-2 col-sm-12 footer-widget"></div>
-
-      <div class="col-md-6 col-sm-12 footer-widget footer-about-us">
-        <h3 class="widget-title">About Infiniti Systems</h3>
-        <p>
-          Infiniti Systems is leading provider of Design and Consultancy
-          services for Electronics and IT Companies. For accomplishing our goal
-          of revolutionizing Indian Industries to Industry-4.0 standards,
-          bringing every seller online and a more productive and efficient
-          agriculture sector, we leverage cutting-edge technologies, in-house
-          developed precision Sensors, and inexpensive Web Development Services.
-        </p>
-        <h4>Address</h4>
-        <p>Bandal Dhankude Plaza,Kothrud Pune-411038</p>
-        <div class="row">
-          <div class="col-md-6">
-            <h4>Email:</h4>
-            <p>info@infinitisystems.co.in</p>
-          </div>
-          <div class="col-md-4">
-            <h4>Phone No.</h4>
-            <p>+(91) 9405435681</p>
-          </div>
-        </div>
-        <form action="createnewsletter" method="post">
-          <div class="input-group subscribe mb-2">
-            {% csrf_token %}
-            <input
-              id="newsletter"
-              type="email"
-              name="email_news"
-              class=" form-control"
-              placeholder="Email Address"
-              required=""
-              style="border-color: azure;"
-            />
-            <span class="input-group-addon">
-              <button class="btn" type="submit">
-                <i class="fa fa-envelope-o"> </i>
-              </button>
-            </span>
-                    </div>
-                    </form>
-
-                    <div id="social" class="row mt-5 ml-1">
-                        <a class="fb-ic" target="_blank" href="https://www.facebook.com/infinitisystemspune/">
-                            <i class="fa fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x">
-            </i>
-                        </a>
-                        <a class="tw-ic" target="_blank" href="https://twitter.com/SystemsInfiniti">
-                            <i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                        </a>
-                        <a class="li-ic" target="_blank" href="https://in.linkedin.com/in/infiniti-systems-b4335b188">
-                            <i class="fa fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                        </a>
-                        <a class="ins-ic" target="_blank" href="https://www.instagram.com/infiniti_systems/?hl=en">
-                            <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                        </a>
+                            <span class="date"><i class="icon icon-calendar"></i>{{everynews.news_date}}</span>
+                        </p>
                     </div>
                 </div>
-                <!--/ end about us -->
+                {%endfor%}
+                <div class="gap-20"></div>
+                <h3 class="widget-title">Subscribe to Our Newsletter</h3>
+                <!-- 1st Latest Post end -->
+                <form action="createnewsletter" method="post">
+                    <div class="input-group subscribe mb-2">
+                        {% csrf_token %}
+                        <input id="newsletter" type="email" name="email_news" class=" form-control" placeholder="Your Email Address Here." required="" style="border-color: azure;" />
+                        <span class="input-group-addon">
+                       <button class="btn" type="submit"><i class="fa fa-envelope-o"></i></button></span>
+                    </div>
+                </form>
             </div>
-            <!-- Row end -->
+            <!--/ End Recent Posts-->
+            <div class="col-md-2 col-sm-12 footer-widget"></div>
+            <div class="col-md-6 col-sm-12 footer-widget footer-about-us">
+                <h3 class="widget-title">About Infiiot Technologies</h3>
+                <p>
+                    Infiiot Technologies is Industrial Automation, Electronics Design, and Consultancy Company;
+                    For accomplishing our goal of revolutionizing Indian Industries to Industry 4.0 standards, bringing every seller online and a more productive and
+                    efficient agriculture sector, We leverage cutting-edge technologies, in-house developed precision Sensors and inexpensive Web Services.
+                </p>
+                <h4><i class="fa fa-home"></i> Reg. Address</h4>
+                <p>4, Sai Vijay Apt., Balaji Nagar, Dhankawdi, Pune-411043</p>
+                <h4><i class="fa fa-institution"></i> HeadQuater. Address</h4>
+                <p>3th floor, Bandal Dhankude Plaza, Kothrud, Pune-411043</p>
+                <h4><i class="fa fa-building"></i> Corp. Office</h4>
+                <p>302, Shubham Park, Anand Tirth Nagar, Kondhwa Bk, Pune-411048</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4><i class="fa fa-envelope-open"></i> Email:</h4>
+                        <p>infiiottechnologies@gmail.com</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h4><i class="fa fa-phone"></i> Phone No.</h4>
+                        <p>+(91) 9405435681</p>
+                    </div>
+                </div>
+                <div id="social" class="row mt-5 ml-1">
+                    <a class="fb-ic" target="_blank" href="https://www.facebook.com/infiiottechnologies/">
+                        <i class="fa fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+                    </a>
+                    <a class="tw-ic" target="_blank" href="https://twitter.com/infiiot/">
+                        <i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                    <a class="li-ic" target="_blank" href="https://www.linkedin.com/company/infiiottechnologies/">
+                        <i class="fa fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                    <a class="ins-ic" target="_blank" href="https://www.instagram.com/infiiottechnologies/">
+                        <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                </div>
+            </div>
+            <!--/ end about us -->
         </div>
-        <!-- Container end -->
+        <!-- Row end -->
+    </div>
+    <!-- Container end -->
 </footer>
 <!-- Footer end -->
